@@ -61,3 +61,6 @@
   header > nav > a { white-space: nowrap; }
   header > nav > a:last-child[href="Contact.dc.html"][style*="radius"] { margin-left: auto; padding: 7px 11px !important; font-size: clamp(12px, 3.4vw, 13px) !important; line-height: 18px !important; }
 }
+
+/* Never let an image frame grow wider than its column (fixes cropped photos on phones) */
+img, [style*="aspect-ratio"] { max-width: 100%; box-sizing: border-box; }
