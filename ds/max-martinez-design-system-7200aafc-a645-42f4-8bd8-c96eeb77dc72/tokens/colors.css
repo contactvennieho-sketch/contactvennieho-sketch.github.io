@@ -1,0 +1,35 @@
+/* INFERRED VALUES — the source crawl gave token NAMES only, no hex codes.
+   Hues are read from the names (orchid, teal, navy, moss, ember, magenta, mint);
+   the five *-deep families are tuned to hold white text at 4.5:1 or better. */
+:root{
+  /* ink + surface */
+  --ink-strong:#0C0C0D;
+  --ink:#1B1B1E;
+  --surface:#FFFFFF;
+  --surface-muted:#F4F2EF;
+  --border-subtle:#E3E0DB;
+
+  /* project accents — case-study card grounds */
+  --accent-orchid-deep:#552A6B;
+  --accent-teal-deep:#0E4C4C;
+  --accent-navy-deep:#16244C;
+  --accent-moss-deep:#27402B;
+  --accent-ember-deep:#6E2A18;
+
+  /* declared secondary accents */
+  --accent-magenta:#D3237B;
+  --accent-mint:#8FE3C4;
+
+  /* semantic text */
+  --text:var(--ink);
+  --text-strong:var(--ink-strong);
+  --text-subtle:#585A5E;
+  --text-faint:#9B9DA1;
+  --text-on-dark:#FFFFFF;
+
+  /* semantic surfaces + lines */
+  --surface-page:var(--surface);
+  --surface-card:var(--surface);
+  --surface-inverse:var(--ink-strong);
+  --border:var(--border-subtle);
+}

@@ -1,0 +1,8 @@
+/* No timing values came through the crawl. These are a conservative default set;
+   treat as unconfirmed. */
+:root{
+  --ease-standard:cubic-bezier(0.22,0.61,0.36,1); /* @kind other */
+  --duration-fast:120ms; /* @kind other */
+  --duration-base:220ms; /* @kind other */
+  --duration-slow:520ms; /* @kind other */
+}

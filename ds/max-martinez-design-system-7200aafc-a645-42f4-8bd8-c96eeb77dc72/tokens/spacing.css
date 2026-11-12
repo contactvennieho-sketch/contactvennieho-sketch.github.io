@@ -1,0 +1,19 @@
+/* space-* tokens are named by their px value. 4 / 10 / 20 / 40 / 120 are seen in source. */
+:root{
+  --space-2:2px;
+  --space-4:4px;   /* source — reserved icon gap */
+  --space-8:8px;
+  --space-10:10px; /* source — button vertical padding */
+  --space-16:16px;
+  --space-20:20px; /* source — button horizontal padding, card gap */
+  --space-32:32px; /* source — card interior padding */
+  --space-40:40px; /* source — CTA vertical padding, page gutter */
+  --space-64:64px;
+  --space-80:80px;
+  --space-120:120px; /* source — CTA horizontal padding, section rhythm */
+  --space-200:200px;
+
+  --gutter-page:var(--space-40);
+  --section-gap:var(--space-120);
+  --card-padding:var(--space-32);
+}

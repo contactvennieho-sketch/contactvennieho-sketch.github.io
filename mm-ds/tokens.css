@@ -1,0 +1,63 @@
+/* Compat + dark-theme layer. Loads AFTER the design system's styles.css,
+   so the overrides below re-point the bound system's semantic colours. */
+:root {
+  /* Native chrome — dropdown popups, file buttons, scrollbars, validation
+     bubbles — must follow the page, not the OS default light Canvas. */
+  color-scheme: dark;
+
+  /* --- grounds --- */
+  --surface: #101010;        /* page */
+  --surface-muted: #181818;  /* secondary surface / section wells */
+  --band: #1F1F1F;           /* emphasis bands that were ink blocks on light */
+  --chip: #2C2C2C;           /* badge / chip ground */
+
+  /* --- ink --- */
+  --ink: #F3F1EC;            /* primary text, warm off-white */
+  --ink-strong: #F3F1EC;     /* primary button fill (label uses --surface) */
+  --text-on-dark: #F3F1EC;
+  --text-subtle: #A9A7A2;    /* secondary copy — 8.4:1 on --surface */
+  --text-muted: #A9A7A2;
+  --text-faint: #8A8883;     /* quiet labels — 5.4:1 on --surface */
+
+  /* --- lines --- */
+  --border-subtle: #2E2E2E;
+  --overlay-border-50: #FFFFFF2E;
+
+  /* --- image wells --------------------------------------------------------
+     Project artwork was keyed off white grounds, so figure wells stay light.
+     Full-colour renders and line drawings both need this. */
+  --figure-light: #F3F1EC;
+  --figure-light-2: #E8E5DF;
+
+  /* --- project accents, lifted for a dark page -----------------------------
+     The source deeps (navy #0d1431, teal #123130, moss #0e3313, ember #19151d)
+     sit at or below the new page ground, so the sticky stack lost its colour
+     cycling. Same hues, raised clear of --surface; all hold --ink above 9:1. */
+  --accent-orchid-deep: #5E1266;
+  --accent-teal-deep:   #16413F;
+  --accent-navy-deep:   #17224E;
+  --accent-moss-deep:   #18441E;
+  --accent-ember-deep:  #2B2431;
+
+  /* pale tints of the project accents, for captions on accent-deep grounds */
+  --accent-orchid-pale: #F3E6F8;
+  --accent-teal-pale:   #E0F2EF;
+  --accent-navy-pale:   #E4EAF7;
+  --accent-moss-pale:   #E9F1E8;
+  --accent-ember-pale:  #FAEBE4;
+
+  /* label sizes used across the portfolio pages */
+  --size-micro: 12px;
+  --size-body-sm: 16px;
+  --tracking-caps: 0.12em;
+  --tracking-caps-wide: 0.12em;
+}
+
+::selection { background: var(--accent-magenta); color: #FFFFFF; }
+
+/* Phones: keep the top menu and the "Start a project" button on one line */
+@media (max-width: 560px) {
+  header > nav { flex-wrap: nowrap !important; gap: 0 clamp(10px, 3.2vw, 16px) !important; font-size: clamp(13px, 3.7vw, 15px) !important; width: 100%; }
+  header > nav > a { white-space: nowrap; }
+  header > nav > a:last-child[href="Contact.dc.html"][style*="radius"] { margin-left: auto; padding: 7px 11px !important; font-size: clamp(12px, 3.4vw, 13px) !important; line-height: 18px !important; }
+}

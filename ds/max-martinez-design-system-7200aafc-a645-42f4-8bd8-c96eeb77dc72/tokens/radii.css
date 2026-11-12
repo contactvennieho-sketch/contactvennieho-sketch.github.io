@@ -1,0 +1,7 @@
+:root{
+  --radius-none:0px;       /* system default — everything except buttons */
+  --radius-sm:4px;         /* primary button */
+  --radius-pill-sm:100px;  /* small outline button */
+  --radius-pill-lg:999px;  /* large closing CTA */
+  --radius-full:9999px;    /* ring motif / circles */
+}

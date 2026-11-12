@@ -1,0 +1,10 @@
+/* SUBSTITUTED FONTS — the crawl exposed token names (--font-display, --font-sans) but no
+   font files or family names. Schibsted Grotesk + Hanken Grotesk are Google Fonts
+   stand-ins chosen to match the tight-tracked grotesk display + neutral sans pairing
+   the source implies. Replace with the real binaries when available. */
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap");
+
+:root{
+  --font-display:"Schibsted Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-sans:"Hanken Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

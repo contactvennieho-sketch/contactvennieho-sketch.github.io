@@ -1,0 +1,39 @@
+/* Sizes marked (source) came through the crawl; the rest are an interpolated ramp. */
+:root{
+  --display-xl-size:200px;      /* source: 200px, -4px tracking; ~128px on tablet */
+  --display-xl-tracking:-4px;
+  --display-lg-size:120px;
+  --display-md-size:64px;
+  --display-sm-size:40px;
+  --title-card-size:28px;       /* Case Study Card title — reasonable in-between, unconfirmed */
+  --body-lg-size:20px;
+  --body-size:16px;             /* source */
+  --eyebrow-size:12px;          /* source */
+  --button-size:16px;
+  --button-cta-size:32px;
+
+  --leading-tight:0.95;
+  --leading-snug:1.1;
+  --leading-body:1.5;
+  --tracking-eyebrow:0.12em;
+
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+
+  --text-display:var(--font-display);
+  --text-body:var(--font-sans);
+}
+
+.display-xl{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--display-xl-size);letter-spacing:var(--display-xl-tracking);line-height:var(--leading-tight);color:var(--ink)}
+.display-lg{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--display-lg-size);letter-spacing:-2.4px;line-height:var(--leading-tight);color:var(--ink)}
+.display-md{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--display-md-size);letter-spacing:-1.28px;line-height:var(--leading-snug);color:var(--ink)}
+.display-sm{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--display-sm-size);letter-spacing:-0.8px;line-height:var(--leading-snug);color:var(--ink)}
+.title-card{font-family:var(--font-display);font-weight:var(--weight-semibold);font-size:var(--title-card-size);letter-spacing:-0.3px;line-height:var(--leading-snug)}
+.body-lg{font-family:var(--font-sans);font-weight:var(--weight-regular);font-size:var(--body-lg-size);line-height:var(--leading-body)}
+.body{font-family:var(--font-sans);font-weight:var(--weight-regular);font-size:var(--body-size);line-height:var(--leading-body)}
+.eyebrow{font-family:var(--font-sans);font-weight:var(--weight-medium);font-size:var(--eyebrow-size);letter-spacing:var(--tracking-eyebrow);line-height:1.2;color:var(--ink)}
+.eyebrow-quiet{font-family:var(--font-sans);font-weight:var(--weight-regular);font-size:var(--eyebrow-size);letter-spacing:var(--tracking-eyebrow);line-height:1.2;color:var(--text-faint)}
+.button{font-family:var(--font-sans);font-weight:var(--weight-medium);font-size:var(--button-size);line-height:1}
+.button-outline{font-family:var(--font-sans);font-weight:var(--weight-regular);font-size:var(--button-size);line-height:1}
+.button-cta{font-family:var(--font-display);font-weight:var(--weight-regular);font-size:var(--button-cta-size);line-height:1}
