@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Performance Running — Vennie Ho</title>
+<meta name="description" content="Knit upper development, CMF direction and technical packaging through to sample review on a performance running shoe.">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+<meta name="robots" content="noindex, nofollow">
+<style>
+html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent-magenta);}
+</style>
+</helmet>
+
+<div style="background:var(--surface); font-family:var(--font-sans); color:var(--ink); overflow-x:hidden;">
+
+  <header style="display:flex; flexWrap:wrap; alignItems:center; justifyContent:space-between; gap:20px 32px; maxWidth:1440px; margin:0 auto; padding:clamp(20px,2.6vw,38px) clamp(20px,3vw,38px);">
+    <a href="Home.dc.html" style="display:block;">
+      <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--ink);">Vennie Ho</div>
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:6px;">Footwear Designer &amp; Developer</div>
+    </a>
+    <nav style="display:flex; flexWrap:wrap; gap:14px clamp(20px,2.4vw,32px); alignItems:center; fontSize:16px; lineHeight:24px;">
+      <a href="Work.dc.html" aria-current="page" style="color:var(--ink); padding:6px 0; borderBottom:1px solid var(--ink);">Work</a>
+      <a href="Services.dc.html" style="color:var(--ink); padding:6px 0;">Services</a>
+      <a href="About.dc.html" style="color:var(--ink); padding:6px 0;">About</a>
+      <a href="Contact.dc.html" style="color:var(--ink); padding:6px 0;">Contact</a>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; gap:var(--space-4); background:var(--ink-strong); border:1px solid var(--ink-strong); borderRadius:var(--radius-sm); boxShadow:var(--shadow-sm); color:var(--surface); fontSize:14px; lineHeight:21px; fontWeight:500; padding:var(--space-10) var(--space-20);" style-hover="background:#000;">Start a project</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Project header" style="maxWidth:1440px; margin:0 auto; padding:clamp(40px,5vw,80px) clamp(20px,3vw,38px) clamp(32px,4vw,56px);">
+    <a href="Work.dc.html" style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle);">← All work</a>
+    <div style="display:flex; flexWrap:wrap; gap:12px 24px; alignItems:baseline; marginTop:clamp(28px,4vw,48px);">
+      <span style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); color:var(--text-subtle);">{{ projectNumber }}</span>
+      <span style="fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">{{ category }}</span>
+    </div>
+    <h1 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(38px,5.6vw,100px); lineHeight:.95; letterSpacing:-0.02em; margin:16px 0 0;">{{ title }}</h1>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(180px,1fr)); gap:clamp(20px,3vw,40px); marginTop:clamp(36px,5vw,64px); borderTop:1px solid var(--border-subtle); paddingTop:clamp(20px,2.5vw,32px);">
+      <sc-for list="{{ metaRows }}" as="m" hint-placeholder-count="4">
+        <div>
+          <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">{{ m.label }}</div>
+          <div style="fontSize:16px; lineHeight:1.6; color:var(--ink); marginTop:10px;">{{ m.value }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Hero" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+    <sc-if value="{{ hasHero }}" hint-placeholder-val="{{ false }}">
+      <figure style="margin:0;">
+        <div style="position:relative; aspectRatio:16 / 6; minHeight:200px; display:flex; alignItems:center; justifyContent:center; padding:clamp(8px,1.5%,24px);">
+          <sc-if value="{{ heroImageReady }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ hero.image }}" alt="{{ hero.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+          </sc-if>
+          <sc-if value="{{ hero.private }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute; top:clamp(14px,2vw,22px); left:clamp(14px,2vw,22px); background:var(--surface); border:1px solid var(--border-subtle); color:var(--text-subtle); fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; padding:6px 10px;">Private — pending approval</span>
+          </sc-if>
+        </div>
+        <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:14px;">{{ heroCaption }}</figcaption>
+      </figure>
+    </sc-if>
+    <sc-if value="{{ noHero }}" hint-placeholder-val="{{ true }}">
+      <div style="border:1px dashed var(--border-subtle); aspectRatio:16 / 7; minHeight:240px; display:flex; flexDirection:column; justifyContent:center; alignItems:center; gap:10px; textAlign:center; padding:clamp(24px,4vw,56px);">
+        <span style="fontSize:13px; fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle);">Hero image slot</span>
+        <span style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">Awaiting approved asset</span>
+      </div>
+    </sc-if>
+  </section>
+
+  <section data-screen-label="01 Overview" style="maxWidth:1440px; margin:0 auto; padding:clamp(56px,7vw,112px) clamp(20px,3vw,38px);">
+    <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(20px,2.6vw,36px);">01 / Overview</div>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(32px,5vw,80px); alignItems:start;">
+      <div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(28px,3.6vw,56px); lineHeight:1.03; letterSpacing:-0.02em; margin:0;">A new upper for an existing running bottom</h2>
+        <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); margin:clamp(20px,2.6vw,32px) 0 0; maxWidth:52ch;">{{ summary }}</p>
+        <div style="borderTop:1px solid var(--border-subtle); marginTop:clamp(24px,3vw,40px); paddingTop:18px;">
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:10px;">My role</div>
+          <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:52ch;">{{ myRole }}</p>
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--ink); paddingTop:18px;">
+        <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:clamp(16px,2vw,24px);">Client requirements</div>
+        <ol style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column;">
+          <sc-for list="{{ requirements }}" as="r" hint-placeholder-count="3">
+            <li style="display:grid; gridTemplateColumns:48px minmax(0,1fr); gap:16px; alignItems:baseline; padding:clamp(14px,1.8vw,20px) 0; borderBottom:1px solid var(--border-subtle);">
+              <span style="fontSize:13px; fontWeight:600; letterSpacing:0.1em; color:var(--text-subtle);">{{ r.num }}</span>
+              <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(19px,1.9vw,26px); lineHeight:1.2; letterSpacing:-0.02em;">{{ r.text }}</span>
+            </li>
+          </sc-for>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="02 Design" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(24px,3vw,56px); alignItems:end;">
+      <div>
+        <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">02 / Design</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(28px,3.6vw,56px); lineHeight:1.03; letterSpacing:-0.02em; margin:0;">From mood to<br>final 2D</h2>
+      </div>
+    </div>
+
+    <div style="marginTop:clamp(32px,4vw,56px);">
+      <sc-for list="{{ moodAssets }}" as="a" hint-placeholder-count="0">
+        <figure style="margin:0;">
+          <div style="position:relative; aspectRatio:3508 / 1923; display:flex; alignItems:center; justifyContent:center;">
+            <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+            <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; padding:5px 9px;">Private</span></sc-if>
+          </div>
+        </figure>
+      </sc-for>
+      <sc-if value="{{ moodboardPending }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px dashed var(--border-subtle); aspectRatio:16 / 6; display:flex; flexDirection:column; justifyContent:center; alignItems:center; gap:8px; textAlign:center; padding:clamp(20px,3vw,40px);">
+          <span style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle);">Moodboard &amp; draft</span>
+          <span style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">To be added</span>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="marginTop:clamp(36px,4.5vw,64px);">
+      <div style="maxWidth:960px; margin:0 auto;">
+        <sc-for list="{{ final2dAssets }}" as="a" hint-placeholder-count="1">
+          <figure style="margin:0; minWidth:0;">
+            <div style="position:relative; aspectRatio:2284 / 983; display:flex; alignItems:center; justifyContent:center;">
+              <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+              <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; padding:5px 9px;">Private</span></sc-if>
+            </div>
+            <figcaption style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="marginTop:clamp(36px,4.5vw,64px);">
+      <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:14px;">Colourways</div>
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(14px,2vw,24px);">
+        <sc-for list="{{ colourways }}" as="a" hint-placeholder-count="3">
+          <figure style="margin:0; minWidth:0;">
+            <div style="position:relative; aspectRatio:2287 / 1031; display:flex; alignItems:center; justifyContent:center;">
+              <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+              <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; padding:5px 9px;">Private</span></sc-if>
+            </div>
+            <figcaption style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="03 Development" style="background:var(--surface-muted); padding:clamp(56px,7vw,112px) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(24px,3vw,56px); alignItems:end;">
+        <div>
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">03 / Development</div>
+          <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(28px,3.6vw,56px); lineHeight:1.03; letterSpacing:-0.02em; margin:0;">Material &amp;<br>technical</h2>
+        </div>
+        <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:50ch;">{{ developmentCopy }}</p>
+      </div>
+
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(28px,4vw,64px); alignItems:start; borderTop:1px solid var(--ink); marginTop:clamp(32px,4vw,56px); paddingTop:clamp(20px,2.6vw,32px);">
+        <div>
+          <div style="display:grid; gridTemplateColumns:40px minmax(0,1fr) minmax(0,1fr); gap:16px; fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); paddingBottom:12px; borderBottom:1px solid var(--border-subtle);">
+            <span></span><span>Challenge</span><span>Solution</span>
+          </div>
+          <sc-for list="{{ challenges }}" as="c" hint-placeholder-count="3">
+            <div style="display:grid; gridTemplateColumns:40px minmax(0,1fr) minmax(0,1fr); gap:16px; alignItems:baseline; padding:clamp(14px,1.8vw,20px) 0; borderBottom:1px solid var(--border-subtle);">
+              <span style="fontSize:13px; fontWeight:600; letterSpacing:0.1em; color:var(--text-subtle);">{{ c.num }}</span>
+              <span style="fontSize:16px; lineHeight:1.5; fontWeight:500; color:var(--ink);">{{ c.challenge }}</span>
+              <span style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle);">{{ c.solution }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:clamp(14px,2vw,24px);">
+          <sc-for list="{{ challengeImages }}" as="a" hint-placeholder-count="2">
+            <figure style="margin:0; minWidth:0;">
+              <div style="position:relative; aspectRatio:4 / 3; display:flex; alignItems:center; justifyContent:center; padding:clamp(10px,3%,20px);">
+                <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+                <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; padding:5px 9px;">Private</span></sc-if>
+              </div>
+              <figcaption style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ a.caption }}</figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="borderTop:1px solid var(--border-subtle); marginTop:clamp(40px,5vw,72px); paddingTop:clamp(20px,2.6vw,32px);">
+        <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:14px;">Technical documentation</div>
+        <ul style="listStyle:none; margin:0; padding:0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:0 clamp(24px,3vw,48px);">
+          <sc-for list="{{ techDocs }}" as="t" hint-placeholder-count="5">
+            <li style="borderBottom:1px solid var(--border-subtle); padding:14px 0; fontSize:16px; lineHeight:1.5; color:var(--ink);">{{ t }}</li>
+          </sc-for>
+        </ul>
+        <p style="fontSize:12px; lineHeight:1.6; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); margin:20px 0 0;">Available on request</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="04 Final" style="maxWidth:1440px; margin:0 auto; padding:clamp(56px,7vw,112px) clamp(20px,3vw,38px);">
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(24px,3vw,56px); alignItems:end;">
+      <div>
+        <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">04 / Final</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(28px,3.6vw,56px); lineHeight:1.03; letterSpacing:-0.02em; margin:0;">Final sample</h2>
+      </div>
+      <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:50ch;">{{ outcome }}</p>
+    </div>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(18px,2.4vw,32px); marginTop:clamp(32px,4vw,56px);">
+      <sc-for list="{{ finalAssets }}" as="a" hint-placeholder-count="2">
+        <figure style="margin:0; minWidth:0;">
+          <div style="position:relative; aspectRatio:3 / 2; display:flex; alignItems:center; justifyContent:center; padding:clamp(14px,3%,32px);">
+            <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+            <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}"><span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; padding:5px 9px;">Private</span></sc-if>
+          </div>
+        </figure>
+      </sc-for>
+    </div>
+    <div style="marginTop:clamp(32px,4vw,56px);">
+      <sc-if value="{{ finalPending }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px dashed var(--border-subtle); aspectRatio:16 / 7; display:flex; flexDirection:column; justifyContent:center; alignItems:center; gap:8px; textAlign:center; padding:clamp(20px,3vw,40px);">
+          <span style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle);">Final sample photography</span>
+          <span style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">To be added</span>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <sc-if value="{{ hasProduct }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Market release" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+      <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(24px,3vw,48px); alignItems:start;">
+        <div>
+          <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">Market release</div>
+          <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2.6vw,38px); lineHeight:1.1; letterSpacing:-0.02em; margin:0;">Commercial release</h2>
+        </div>
+        <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:48ch;">Selected work from this project was commercially released and listed through brand and/or retail channels.</p>
+      </div>
+      <div style="marginTop:clamp(28px,3.4vw,48px);">
+        <sc-for list="{{ releases }}" as="r" hint-placeholder-count="2">
+          <div style="borderTop:1px solid var(--border-subtle); padding:clamp(18px,2.2vw,26px) 0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:14px clamp(20px,3vw,48px); alignItems:start;">
+            <div style="minWidth:0;">
+              <div style="fontSize:clamp(16px,1.4vw,19px); fontWeight:500; color:var(--ink);">{{ r.name }}</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-subtle); marginTop:6px; maxWidth:40ch;">{{ r.note }}</div>
+            </div>
+            <div style="display:flex; flexDirection:column; gap:10px; alignItems:flex-start; minWidth:0;">
+              <sc-if value="{{ r.hasPrimary }}" hint-placeholder-val="{{ true }}">
+                <a href="{{ r.url }}" target="_blank" rel="noopener noreferrer" style="fontSize:12px; fontWeight:600; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); borderBottom:1px solid var(--ink); paddingBottom:3px;" style-hover="color:var(--accent-magenta); borderBottomColor:var(--accent-magenta);">{{ r.label }} ↗</a>
+              </sc-if>
+              <sc-if value="{{ r.isArchiveOnly }}" hint-placeholder-val="{{ false }}">
+                <span style="fontSize:12px; fontWeight:600; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-on-dark); background:var(--chip); padding:6px 10px;">Commercial release</span>
+              </sc-if>
+              <sc-for list="{{ r.secondary }}" as="s" hint-placeholder-count="0">
+                <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="fontSize:12px; fontWeight:500; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); borderBottom:1px solid var(--border-subtle); paddingBottom:3px;" style-hover="color:var(--ink); borderBottomColor:var(--ink);">{{ s.label }} ↗</a>
+              </sc-for>
+            </div>
+            <sc-if value="{{ r.showProof }}" hint-placeholder-val="{{ false }}">
+              <figure style="margin:0; minWidth:0;">
+                <div style="aspectRatio:16 / 10; overflow:hidden;">
+                  <img src="{{ r.proofImage }}" alt="{{ r.proofAlt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+                </div>
+                <figcaption style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ r.archivedLine }}</figcaption>
+              </figure>
+            </sc-if>
+            <sc-if value="{{ r.noProof }}" hint-placeholder-val="{{ true }}">
+              <span aria-hidden="true"></span>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <section data-screen-label="Next project" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <a href="SportswearLifestyle.dc.html" style="display:block;">
+      <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(20px,2.5vw,32px);">Next project</div>
+      <div style="aspectRatio:16 / 6; minHeight:200px; display:flex; alignItems:center; justifyContent:center; padding:clamp(24px,5%,72px);">
+        <sc-if value="{{ hasNext }}" hint-placeholder-val="{{ false }}">
+          <img src="{{ next.image }}" alt="{{ next.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+        </sc-if>
+      </div>
+      <div style="borderTop:1px solid var(--ink); paddingTop:20px; marginTop:20px; display:flex; flexWrap:wrap; justifyContent:space-between; alignItems:baseline; gap:12px 32px;">
+        <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.2vw,48px); lineHeight:1.02;">{{ next.title }}</span>
+        <span style="fontSize:13px; fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; borderBottom:1px solid var(--ink); paddingBottom:3px;">View project →</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="contact" data-screen-label="CTA" class="on-ink" style="background:var(--band); color:var(--text-on-dark); padding:clamp(56px,7vw,112px) 0 clamp(56px,7vw,96px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(38px,6.4vw,96px); lineHeight:.95; letterSpacing:-0.02em; margin:0; color:var(--text-on-dark);">Have a project<br>in mind?</h2>
+      <p style="fontSize:clamp(17px,1.3vw,20px); lineHeight:1.6; color:var(--text-muted); maxWidth:52ch; margin:clamp(28px,4vw,44px) 0 0;">From initial concept to technical development, sampling and production support.</p>
+      <div style="display:flex; flexWrap:wrap; gap:16px 28px; alignItems:center; marginTop:clamp(36px,4.5vw,56px);">
+        <a href="mailto:contact.vennie.ho@gmail.com" style="display:inline-flex; alignItems:center; justifyContent:center; background:transparent; border:1px solid var(--overlay-border-50); borderRadius:var(--radius-pill-lg); color:var(--text-on-dark); fontSize:16px; lineHeight:24px; fontWeight:700; padding:clamp(20px,3vw,32px) clamp(40px,8vw,96px);" style-hover="borderColor:var(--text-on-dark);">Say hi</a>
+        <a href="Services.dc.html" style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-on-dark); borderBottom:1px solid var(--overlay-border-50); paddingBottom:4px;">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="on-ink" style="background:var(--band); color:var(--text-on-dark); padding:0 0 clamp(32px,4vw,56px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(28px,4vw,56px); borderTop:1px solid var(--overlay-border-50); paddingTop:clamp(36px,4.5vw,64px);">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,40px); letterSpacing:-0.02em; color:var(--text-on-dark);">Vennie Ho</div>
+          <div style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); marginTop:14px; lineHeight:1.9;">Footwear Designer &amp; Developer<br>From concept to production.</div>
+        </div>
+        <nav style="display:flex; flexDirection:column; gap:12px; fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase;">
+          <a href="Work.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Work</a>
+          <a href="Services.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Services</a>
+          <a href="About.dc.html" style="color:var(--text-on-dark); padding:6px 0;">About</a>
+          <a href="Contact.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Contact</a>
+        </nav>
+        <div style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); lineHeight:1.9;">
+          <a href="mailto:contact.vennie.ho@gmail.com" style="color:var(--text-on-dark);">contact.vennie.ho@gmail.com</a><br>Global
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--overlay-border-50); marginTop:clamp(36px,4.5vw,64px); paddingTop:24px; fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); display:flex; flexWrap:wrap; justifyContent:space-between; gap:10px 32px;">
+        <span>{{ copyright }}</span>
+        <span>Brand work shown for portfolio purposes. Trademarks belong to their owners. <a href="Work.dc.html#disclaimer" style="color:var(--text-on-dark); textDecoration:underline; textUnderlineOffset:3px;">Read the full disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;internalReview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Confidentiality&quot;},&quot;projectNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;01&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Performance Running&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;category&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Footwear Design &amp; Development&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;commercialRelease&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;officialBrandLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailerName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;}}">
+// Asset model: image, caption, stage, sortOrder, visibility, internalNotes
+// Each asset appears once. Stages without a real asset fall back to a labelled slot
+// rather than re-captioning the same render as a different stage.
+const ASSETS = [
+  { image: "assets/running/00_MOODBOARD_DRAFT_v3.png", caption: "Moodboard and draft", stage: "MOODBOARD", sortOrder: 0, visibility: "sanitized", internalNotes: "Moodboard references are third-party imagery; adidas marks in the draft sketches", alt: "Urban Ether moodboard of translucent, layered references and mesh textures, beside pencil silhouette sketches and shaded draft renderings of a running shoe" },
+  { image: "assets/running/00_HERO_RANGE.png", caption: "Performance Running — colourway range", stage: "HERO", sortOrder: 1, visibility: "public", internalNotes: "Approved for public use by Vennie", alt: "Four running shoes in beige, navy, white with red, and black with mint, linked by braided laces" },
+  { image: "assets/running/02_DESIGN_EXPLORATION.png", caption: "Draft — early design exploration", stage: "DRAFT", sortOrder: 2, visibility: "public", internalNotes: "Publication rights pending", alt: "Greyscale side profile of a running shoe showing upper panelling and midsole geometry" },
+  { image: "assets/running/03_DESIGN_DARK_COLORWAY.png", caption: "02 / Alternate design direction", stage: "UNUSED", sortOrder: 3, visibility: "public", internalNotes: "Publication rights pending", alt: "Black running shoe with purple three-stripe detail and tonal midsole" },
+  { image: "assets/running/19_MATERIAL_MESH.png", caption: "Upper mesh", stage: "MATERIAL", sortOrder: 4, visibility: "sanitized", internalNotes: "Material close-up — no codes", alt: "Close-up of grey engineered mesh used on the upper" },
+  { image: "assets/running/20_MATERIAL_LACE.png", caption: "Lace", stage: "MATERIAL", sortOrder: 4.5, visibility: "sanitized", internalNotes: "Material close-up — no codes", alt: "Flat white woven lace with a red pattern and red aglet" },
+  { image: "assets/running/16_CW_BLACK_MINT.png", caption: "Core black & mint", stage: "CMF", sortOrder: 5, visibility: "sanitized", internalNotes: "adidas marks visible — clearance required", alt: "Black running shoe with mint dotted three stripes, mint heel tab and a black-to-teal midsole" },
+  { image: "assets/running/17_CW_CREAM_BROWN.png", caption: "Cream & dark brown", stage: "CMF", sortOrder: 6, visibility: "sanitized", internalNotes: "adidas marks visible — clearance required", alt: "Cream running shoe with dark brown dotted three stripes, brown heel tab and a beige midsole" },
+  { image: "assets/running/18_CW_NAVY_WHITE_v2.png", caption: "Navy & white", stage: "CMF", sortOrder: 7, visibility: "sanitized", internalNotes: "adidas marks visible — clearance required", alt: "Navy running shoe with white dotted three stripes, a white heel tab and a navy midsole" },
+  { image: "assets/running/10_TECHNICAL_SHELL.png", caption: "Upper shell — lateral and medial", stage: "TECHNICAL", sortOrder: 9, visibility: "public", internalNotes: "Construction development drawing — approval required", alt: "Line drawing of a running shoe upper shell with lateral and medial construction lines and a flattened pattern below" },
+  { image: "assets/running/11_TECHNICAL_PACKAGE_BLUE.png", caption: "Tech pack excerpt", stage: "TECHNICAL", sortOrder: 10, visibility: "public", internalNotes: "Full technical page — contains supplier names and material codes. Never publish", alt: "Technical package page showing component colour breakdown for the blue colourway" },
+  { image: "assets/running/12_TECHNICAL_PACKAGE_BLACK.png", caption: "Tech pack excerpt", stage: "TECHNICAL", sortOrder: 11, visibility: "public", internalNotes: "Full technical page — contains supplier names and material codes. Never publish", alt: "Technical package page showing component colour breakdown for the black colourway" },
+  { image: "assets/running/15_FINAL_2D.png", caption: "Final 2D design", stage: "FINAL2D", sortOrder: 12, visibility: "sanitized", internalNotes: "No approved final product photography exists yet — this is the refined design, not a product shot", alt: "Refined running shoe design in off white with navy three stripes and heel counter" },
+  { image: "assets/running/13_FINAL_SAMPLE_34.png", caption: "Final sample — three-quarter view", stage: "FINAL", sortOrder: 13, visibility: "public", internalNotes: "Unreleased product — approval required", alt: "Black knit running shoe with turquoise three stripes, heel clip and midsole stripe, three-quarter view" },
+  { image: "assets/running/14_FINAL_SAMPLE_PAIR.png", caption: "Final sample — lateral and medial", stage: "FINAL", sortOrder: 14, visibility: "public", internalNotes: "Unreleased product — approval required", alt: "Pair of black knit running shoes with turquoise accents, shown from both sides" }
+];
+
+class Component extends DCLogic {
+  renderVals() {
+    const internalReview = this.props.internalReview ?? false;
+    const visible = ASSETS
+      .filter(a => a.visibility !== "private" || internalReview)
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+      .map(a => ({ ...a, private: a.visibility === "private" }));
+    const byStage = s => visible.filter(a => a.stage === s);
+
+    const hero = byStage("HERO")[0] || null;
+
+    return {
+      copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
+      // No commercial listings supplied for this project yet.
+      releases: [],
+      hasProduct: false,
+      projectNumber: this.props.projectNumber ?? "01",
+      title: this.props.title ?? "Performance Running",
+      category: this.props.category ?? "Footwear Design & Development",
+      heroCaption: "Project / Performance Running / SS25",
+      metaRows: [
+        { label: "Role", value: "Footwear Design & Development" },
+        { label: "Category", value: "Performance Running" },
+        { label: "Scope", value: "Design · CMF · Sample & Technical Development" }
+      ],
+
+      summary: "A performance running shoe built on an existing bottom unit, with a new upper designed to fit it while keeping the shoe light and within a low-to-mid price range.",
+      myRole: "Upper design, colourways, material choices and technical development through to final sample.",
+      requirements: [
+        { num: "01", text: "Lightweight" },
+        { num: "02", text: "Low to mid price range" },
+        { num: "03", text: "New upper design" }
+      ],
+      developmentCopy: "Issues found in development, and how each was solved.",
+      challenges: [
+        { num: "01", challenge: "Screen print on the mesh upper showed poor adhesion, with peeling and flaking.", solution: "Reduced the mesh open area (smaller hole size) to give the ink a more stable bonding surface. The revised upper passed the wash test.", images: byStage("MATERIAL") },
+        { num: "02", challenge: "The upper showed puckering and a bulging appearance, which affected the clean finish.", solution: "Reduced the foam backing in the upper lamination by 1–2 mm, which brought the upper back to a smooth, flat finish.", images: [] },
+        { num: "03", challenge: "Wrinkling appeared on the lateral quarter after lasting.", solution: "Adjusted the lasting tension at the insole board bonding to remove the excess material on the lateral side.", images: [] }
+      ],
+      outcome: "The project was developed through to final sample.",
+      moodboardPending: byStage("MOODBOARD").length === 0,
+      finalPending: false,
+      finalAssets: byStage("FINAL"),
+      challengeImages: byStage("MATERIAL"),
+      moodAssets: byStage("MOODBOARD"),
+      final2dAssets: byStage("FINAL2D"),
+      colourways: byStage("CMF"),
+      techDocs: ["Tech pack", "BOM", "Material specification", "Construction callouts", "Colour and component breakdown"],
+
+      next: { title: "Sportswear / Lifestyle", image: "assets/sportswear/00_HERO_RANGE_v2.png", alt: "Six sneakers floating on black — a black and cream court shoe, a pink court shoe, a white and sage court shoe, a cream and silver court shoe, a navy and white court shoe and a cream knit slip-on with navy laces" },
+      hasNext: true,
+
+      hero: hero || {},
+      hasHero: !!hero,
+      heroImageReady: !!(hero && hero.image),
+      noHero: !hero
+    };
+  }
+}
+</script>
+</body>
+</html>

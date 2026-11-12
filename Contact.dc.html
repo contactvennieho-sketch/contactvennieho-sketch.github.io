@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Start a Project — Vennie Ho</title>
+<meta name="description" content="Share where your footwear project stands and what support you need — design, technical development, sampling or production support.">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+<style>
+html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent-magenta);}
+input,select,textarea,button{font:inherit;color:inherit;}
+input,select,textarea{background:transparent;border:0;border-bottom:1px solid var(--border-subtle);border-radius:0;padding:10px 0;width:100%;box-sizing:border-box;}
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 9px) 19px,calc(100% - 4px) 19px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:24px;}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent-magenta);outline-offset:3px;border-bottom-color:var(--ink);}
+input[type="checkbox"]{width:auto;}
+input[type="file"]{border-bottom:0;padding:0;}
+textarea{resize:vertical;}
+option{background:var(--surface-muted);color:var(--ink);}
+::placeholder{color:var(--text-faint);}
+</style>
+</helmet>
+
+<div style="background:var(--surface); fontFamily:var(--font-sans); color:var(--ink); overflowX:hidden;">
+
+  <header style="display:flex; flexWrap:wrap; alignItems:center; justifyContent:space-between; gap:20px 32px; maxWidth:1440px; margin:0 auto; padding:clamp(20px,2.6vw,38px) clamp(20px,3vw,38px);">
+    <a href="Home.dc.html" style="display:block;">
+      <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--ink);">Vennie Ho</div>
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:6px;">Footwear Designer &amp; Developer</div>
+    </a>
+    <nav style="display:flex; flexWrap:wrap; gap:14px clamp(20px,2.4vw,32px); alignItems:center; fontSize:16px; lineHeight:24px;">
+      <a href="Work.dc.html" style="color:var(--ink); padding:6px 0;">Work</a>
+      <a href="Services.dc.html" style="color:var(--ink); padding:6px 0;">Services</a>
+      <a href="About.dc.html" style="color:var(--ink); padding:6px 0;">About</a>
+      <a href="Contact.dc.html" style="color:var(--ink); padding:6px 0; borderBottom:1px solid var(--ink);">Contact</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Contact intro" style="maxWidth:1440px; margin:0 auto; padding:clamp(40px,6vw,96px) clamp(20px,3vw,38px) clamp(40px,5vw,72px);">
+    <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">Contact</div>
+    <h1 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(44px,7.2vw,110px); lineHeight:0.95; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0;">Start a project.</h1>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(24px,3vw,56px); marginTop:clamp(28px,3.4vw,48px);">
+      <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:52ch;">Have a footwear project in development? Share where it currently stands, what support you need, and a little context about the product.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Enquiry form" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(32px,4vw,72px); alignItems:start;">
+
+      <aside style="display:flex; flexDirection:column; gap:clamp(28px,3.4vw,44px);">
+        <div style="borderTop:1px solid var(--ink); paddingTop:18px;">
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:14px;">Email</div>
+          <a href="mailto:contact.vennie.ho@gmail.com" style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(19px,1.9vw,26px); letterSpacing:-0.02em; color:var(--ink); wordBreak:break-word;">contact.vennie.ho@gmail.com</a>
+          <div style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:16px;">Global</div>
+        </div>
+        <div style="borderTop:1px solid var(--border-subtle); paddingTop:18px;">
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:14px;">Projects can start at any stage</div>
+          <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:42ch;">Some clients need an initial footwear direction. Others already have a design, sample or factory in place and need support with one specific development stage.</p>
+          <a href="Services.dc.html" style="display:inline-flex; alignItems:center; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-sm); color:var(--ink); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20); marginTop:clamp(20px,2.6vw,28px);" style-hover="background:var(--ink-strong); color:var(--surface); borderColor:var(--ink-strong);">See services →</a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <footer style="background:var(--band); color:var(--text-on-dark); padding:var(--space-40) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(24px,3vw,48px);">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--text-on-dark);">Vennie Ho</div>
+          <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted); marginTop:10px;">Footwear Designer &amp; Developer<br>From concept to production.</div>
+        </div>
+        <nav style="display:flex; flexDirection:column; gap:10px; fontSize:16px; lineHeight:24px;">
+          <a href="Work.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Work</a>
+          <a href="Services.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Services</a>
+          <a href="About.dc.html" style="color:var(--text-on-dark); padding:6px 0;">About</a>
+          <a href="Contact.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Contact</a>
+        </nav>
+        <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted);">
+          <a href="mailto:contact.vennie.ho@gmail.com" style="color:var(--text-on-dark);">contact.vennie.ho@gmail.com</a><br>Global
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--overlay-border-50); marginTop:clamp(28px,3.5vw,48px); paddingTop:20px; fontSize:16px; lineHeight:24px; color:var(--text-muted); display:flex; flexWrap:wrap; justifyContent:space-between; gap:10px 32px;">
+        <span>{{ copyright }}</span>
+        <span>Brand work shown for portfolio purposes. Trademarks belong to their owners. <a href="Work.dc.html#disclaimer" style="color:var(--text-on-dark); textDecoration:underline; textUnderlineOffset:3px;">Read the full disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { submitted: false, errors: {}, sentEmail: "" };
+
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    const f = ev.target;
+    const name = (f.name && f.name.value || "").trim();
+    const email = (f.email && f.email.value || "").trim();
+    const desc = (f.description && f.description.value || "").trim();
+    const errors = {};
+    if (!name) errors.name = "Name is required.";
+    if (!email) errors.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "Enter a valid email address.";
+    if (!desc) errors.description = "Project description is required.";
+
+    if (Object.keys(errors).length) {
+      this.setState({ errors: errors });
+      const firstId = errors.name ? "cf-name" : errors.email ? "cf-email" : "cf-desc";
+      setTimeout(() => { const el = document.getElementById(firstId); if (el) el.focus(); }, 0);
+      return;
+    }
+    // No backend wired: the enquiry is captured client-side only.
+    this.setState({ submitted: true, errors: {}, sentEmail: email });
+  };
+
+  reset = () => this.setState({ submitted: false, errors: {}, sentEmail: "" });
+
+  renderVals() {
+    const e = this.state.errors;
+    const list = [];
+    if (e.name) list.push(e.name);
+    if (e.email) list.push(e.email);
+    if (e.description) list.push(e.description);
+    return {
+      copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      sentEmail: this.state.sentEmail,
+      onSubmit: this.handleSubmit,
+      reset: this.reset,
+      hasErrors: list.length > 0,
+      errorList: list,
+      nameError: !!e.name, nameInvalid: e.name ? "true" : "false",
+      emailError: !!e.email, emailInvalid: e.email ? "true" : "false", emailErrorText: e.email || "",
+      descError: !!e.description, descInvalid: e.description ? "true" : "false",
+      projectTypes: ["Footwear design", "Technical package", "Product development", "Cost optimization", "Technical consulting", "Factory communication", "Apparel / product design", "Other"],
+      projectStages: ["Idea", "Brief", "Concept", "Design", "Prototype / sample", "Existing product", "Production development"],
+      timelines: ["Flexible", "Less than 1 month", "1–3 months", "3–6 months", "6+ months", "Not sure yet"],
+      supportOptions: ["Design", "CMF / colour & material", "Technical documentation", "Tech pack", "Sample development", "Product revision", "Cost-driven design", "Factory communication", "Production support", "Not sure / need guidance"]
+    };
+  }
+}
+</script>
+</body>
+</html>

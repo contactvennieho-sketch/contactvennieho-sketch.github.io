@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Vennie Ho — Footwear Design & Development</title>
+<meta name="description" content="Independent footwear design, technical development, sampling and production support for performance and lifestyle footwear.">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+<style>
+html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent-magenta);}
+@keyframes mmVeil{from{opacity:1;}to{opacity:0;}}
+@keyframes mmSettle{from{opacity:0;transform:scale(1.04);}to{opacity:1;transform:none;}}
+@keyframes mmRise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;}}
+/* Swipe rows: on phones and small tablets, long stacks become one horizontal row */
+.rail-hint{display:none;}
+@media (max-width: 760px){
+  .h-rail{display:flex !important;flex-wrap:nowrap !important;align-items:stretch !important;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:16px !important;margin:0 -20px;padding:0 20px 4px;scroll-padding-left:20px;}
+  .h-rail--edge{margin:0 !important;}
+  .h-rail::-webkit-scrollbar{display:none;}
+  .h-rail > *{flex:0 0 84%;min-width:0;scroll-snap-align:start;box-sizing:border-box;}
+  .h-rail--small > *{flex-basis:72%;}
+  .h-rail--stack > *{position:static !important;margin-bottom:0 !important;}
+  .h-rail--stack > * > div{height:100%;box-sizing:border-box;grid-template-columns:minmax(0,1fr) !important;}
+  .h-rail--stack > * > div > div:last-child{justify-content:center;}
+  .h-rail--cards > * > div > div{grid-template-columns:minmax(0,1fr) !important;}
+  .h-rail--rows > *{border:1px solid var(--border-subtle) !important;padding:20px !important;}
+  .h-rail--cards > *{border:1px solid var(--border-subtle);padding-top:40px !important;padding-bottom:40px !important;}
+  .rail-hint{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-subtle);}
+  .rail-hint span:last-child, .rail-hint:not(:has(span)){font-size:20px;letter-spacing:0;line-height:1;}
+}
+</style>
+</helmet>
+
+<div style="background:var(--surface); fontFamily:var(--font-sans); color:var(--ink); overflowX:hidden;">
+
+  <header style="display:flex; flexWrap:wrap; alignItems:center; justifyContent:space-between; gap:20px 32px; maxWidth:1440px; margin:0 auto; padding:clamp(20px,2.6vw,38px) clamp(20px,3vw,38px);">
+    <a href="#top" style="display:block;">
+      <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--ink);">Vennie Ho</div>
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:2px;">Footwear Designer &amp; Developer</div>
+    </a>
+    <nav style="display:flex; flexWrap:wrap; gap:14px clamp(20px,2.4vw,32px); alignItems:center; fontSize:16px; lineHeight:24px;">
+      <a href="Work.dc.html" style="color:var(--ink); padding:6px 0;">Work</a>
+      <a href="Services.dc.html" style="color:var(--ink); padding:6px 0;">Services</a>
+      <a href="About.dc.html" style="color:var(--ink); padding:6px 0;">About</a>
+      <a href="Contact.dc.html" style="color:var(--ink); padding:6px 0;">Contact</a>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; gap:var(--space-4); background:var(--ink-strong); border:1px solid var(--ink-strong); borderRadius:var(--radius-sm); boxShadow:var(--shadow-sm); color:var(--surface); fontSize:14px; lineHeight:21px; fontWeight:500; padding:var(--space-10) var(--space-20);" style-hover="background:#000;">Start a project</a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="display:flex; flexWrap:wrap; alignItems:center; gap:clamp(24px,3vw,40px) 0; paddingLeft:max(clamp(20px,3vw,38px), calc((100vw - 1440px) / 2 + 38px)); paddingTop:clamp(16px,3vw,40px); paddingBottom:clamp(56px,7vw,104px); overflow:hidden;">
+    <div style="position:relative; zIndex:3; flex:1 1 360px; minWidth:0; padding:clamp(24px,4vw,56px) 0; animation:mmRise .7s cubic-bezier(.33,1,.68,1) .15s both;">
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink);">Footwear design &amp; development</div>
+      <h1 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(44px,7.2vw,96px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0; color:var(--ink); width:max-content; maxWidth:calc(100vw - 40px); position:relative;">From concept<br>to production.</h1>
+      <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); maxWidth:46ch; margin:clamp(20px,2.6vw,32px) 0 0;">I design and develop performance and lifestyle footwear — concept through technical development, sampling and production support.</p>
+      <div style="fontFamily:var(--font-sans); fontWeight:400; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:clamp(18px,2.4vw,28px);">Design · CMF · Technical · Development · Production</div>
+      <div style="display:flex; flexWrap:wrap; gap:16px; marginTop:clamp(28px,3.4vw,40px);">
+        <a href="Work.dc.html" style="display:inline-flex; alignItems:center; gap:var(--space-4); background:var(--ink-strong); border:1px solid var(--ink-strong); borderRadius:var(--radius-sm); boxShadow:var(--shadow-sm); color:var(--surface); fontSize:14px; lineHeight:21px; fontWeight:500; padding:var(--space-10) var(--space-20);" style-hover="opacity:0.88;">View work →</a>
+        <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-sm); color:var(--text-subtle); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20);" style-hover="borderColor:var(--ink); color:var(--ink);">Start a project</a>
+      </div>
+    </div>
+    <div style="flex:2.2 1 520px; minWidth:0; position:relative; zIndex:1;">
+      <div role="img" aria-label="White mesh running shoe with a red heel patch, shown beside its line drawing and outsole sketch" style="position:relative; width:100%; aspectRatio:1240 / 920; background:#000; WebkitMaskImage:linear-gradient(90deg, transparent 0%, #000 14%); maskImage:linear-gradient(90deg, transparent 0%, #000 14%); animation:mmSettle 1.8s cubic-bezier(.33,1,.68,1) both;">
+        <img src="assets/home/hero_shoe_v3.png" alt="" style="width:100%; height:100%; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Positioning" style="background:var(--surface-muted); padding:clamp(64px,8vw,120px) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,4vw,64px); alignItems:end;">
+      <div>
+        <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-faint);">Design + development</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(34px,5vw,72px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0;">Beyond design.</h2>
+      </div>
+      <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:56ch; alignSelf:center;">I combine creative footwear design with technical development, materials, manufacturing knowledge and product-development support to move products from initial concept toward production.</p>
+    </div>
+  </section>
+
+  <div id="work" data-screen-label="Work stack" style="maxWidth:1440px; margin:0 auto; padding:clamp(64px,8vw,120px) clamp(20px,3vw,38px) 0;">
+    <div class="rail-hint" aria-hidden="true" style="paddingBottom:16px;"><span>Case studies</span><span>→</span></div>
+    <div class="h-rail h-rail--stack" role="region" aria-label="Case studies — scroll sideways for more" tabIndex="0">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+      <a href="{{ p.href }}" style="display:block; position:sticky; top:clamp(16px,3vw,48px); marginBottom:clamp(20px,2.6vw,32px);">
+        <div style="background:{{ p.bg }}; color:var(--text-on-dark); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(24px,3vw,48px); alignItems:center; padding:clamp(28px,4vw,64px);">
+          <div style="minWidth:0;">
+            <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:{{ p.pale }};">{{ p.kicker }}</div>
+            <h3 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(30px,4.2vw,64px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(14px,1.8vw,24px) 0 0; color:var(--text-on-dark);">{{ p.title }}</h3>
+            <p style="fontSize:16px; lineHeight:24px; color:var(--text-on-dark); margin:clamp(14px,1.8vw,22px) 0 0; maxWidth:42ch; opacity:.85;">{{ p.line }}</p>
+            <div style="fontFamily:var(--font-sans); fontWeight:400; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:{{ p.pale }}; marginTop:clamp(16px,2vw,26px);">{{ p.services }}</div>
+            <div style="display:inline-flex; alignItems:center; background:transparent; border:1px solid var(--overlay-border-50); borderRadius:var(--radius-pill-sm); color:var(--text-on-dark); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20); marginTop:clamp(20px,2.6vw,32px);">View project →</div>
+          </div>
+          <div style="display:flex; alignItems:center; justifyContent:center; minHeight:clamp(200px,24vw,340px);">
+            <img src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy" style="width:100%; height:100%; maxHeight:clamp(200px,24vw,340px); objectFit:contain; display:block;">
+          </div>
+        </div>
+      </a>
+    </sc-for>
+    </div>
+  </div>
+
+  <div style="maxWidth:1440px; margin:0 auto; padding:clamp(16px,2vw,28px) clamp(20px,3vw,38px) clamp(28px,3.5vw,48px);">
+    <a href="Work.dc.html" style="display:inline-flex; alignItems:center; background:#F3F1EC; border:1px solid #F3F1EC; borderRadius:var(--radius-pill-sm); color:#101010; fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20);" style-hover="opacity:0.88;">Discover more work...</a>
+  </div>
+
+  <section id="services" data-screen-label="Services" style="background:var(--surface-muted); padding:clamp(64px,8vw,120px) 0 clamp(16px,2vw,32px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(24px,3vw,48px); alignItems:end;">
+        <div>
+          <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-faint);">Services</div>
+          <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(34px,5vw,72px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0;">From design<br>to development.</h2>
+        </div>
+      </div>
+      <div style="marginTop:clamp(36px,4.5vw,64px);">
+        <div class="rail-hint" aria-hidden="true" style="paddingBottom:16px;"><span>4 services</span><span>→</span></div>
+        <div class="h-rail h-rail--rows" role="region" aria-label="Services — scroll sideways for more" tabIndex="0">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+          <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(240px,1fr)); gap:16px clamp(24px,3vw,48px); padding:clamp(24px,3vw,40px) 0; borderTop:1px solid var(--border-subtle);">
+            <div style="display:flex; gap:clamp(14px,1.8vw,24px); alignItems:baseline; minWidth:0;">
+              <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2.6vw,36px); lineHeight:1; letterSpacing:-0.02em; color:var(--text-faint);">{{ s.num }}</span>
+              <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(24px,3vw,44px); lineHeight:1; letterSpacing:-0.02em;">{{ s.title }}</span>
+            </div>
+            <p style="fontSize:16px; lineHeight:24px; color:var(--text-subtle); margin:0; maxWidth:42ch;">{{ s.desc }}</p>
+            <ul style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column; gap:6px; fontFamily:var(--font-sans); fontWeight:400; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">
+              <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="5">
+                <li>{{ it }}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+        </div>
+        <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); marginTop:clamp(0px,0vw,0px);">
+          <a href="Services.dc.html" style="display:inline-flex; alignItems:center; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-sm); color:var(--text-subtle); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20);" style-hover="borderColor:var(--ink); color:var(--ink);">Explore services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" data-screen-label="Approach" style="background:var(--surface-muted); padding:clamp(16px,2vw,32px) 0 clamp(64px,8vw,120px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-faint);">Approach</div>
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(30px,4.4vw,64px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0;">Creative thinking.<br>Technical understanding.</h2>
+      <div class="rail-hint" aria-hidden="true" style="paddingTop:28px;"><span>4 reasons</span><span>→</span></div>
+      <div class="h-rail h-rail--small" role="region" aria-label="Approach — scroll sideways for more" tabIndex="0" style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(24px,3vw,48px); marginTop:clamp(16px,4.5vw,64px);">
+        <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="4">
+          <div style="borderTop:1px solid var(--ink); paddingTop:20px;">
+            <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase;">{{ r.title }}</div>
+            <p style="fontSize:16px; lineHeight:24px; color:var(--text-subtle); margin:14px 0 0; maxWidth:38ch;">{{ r.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(24px,3vw,48px); alignItems:start; marginTop:clamp(40px,5vw,80px); borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px);">
+        <a href="About.dc.html" style="display:block; maxWidth:280px; color:var(--ink);">
+          <img src="assets/about/portrait_square.png" alt="Vennie at her desk" loading="lazy" style="width:100%; aspectRatio:1 / 1; objectFit:cover; display:block;">
+          <span style="display:inline-block; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:14px; paddingBottom:3px; borderBottom:1px solid var(--ink);">About Vennie →</span>
+        </a>
+        <div>
+          <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginBottom:16px;">Six years — experience across</div>
+          <div style="display:flex; flexWrap:wrap; gap:8px 20px; fontFamily:var(--font-display); fontWeight:500; fontSize:clamp(17px,1.7vw,22px); letterSpacing:-0.01em;">
+            <span>Running</span><span>Court</span><span>Badminton</span><span>Cricket</span><span>Pickleball</span><span>Training</span><span>Lifestyle</span><span>Slides</span><span>Apparel</span>
+          </div>
+        </div>
+        <div>
+          <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginBottom:16px;">Global design and development experience</div>
+          <div style="display:flex; flexWrap:wrap; gap:8px 20px; fontFamily:var(--font-display); fontWeight:500; fontSize:clamp(17px,1.7vw,22px); letterSpacing:-0.01em;">
+            <span>India</span><span>Vietnam</span><span>China</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Final CTA" style="background:var(--surface); padding:clamp(72px,9vw,140px) 0 clamp(48px,6vw,88px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px); display:flex; flexDirection:column; alignItems:center; textAlign:center; gap:clamp(24px,3vw,40px);">
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(40px,7vw,96px); lineHeight:1; letterSpacing:-0.02em; margin:0;">Building something<br>new?</h2>
+      <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); maxWidth:50ch; margin:0;">From initial footwear concept to technical development, sampling and production support.</p>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; justifyContent:center; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-lg); color:var(--text-subtle); fontSize:16px; lineHeight:24px; fontWeight:700; padding:clamp(24px,4vw,40px) clamp(48px,10vw,120px);" style-hover="borderColor:var(--ink); color:var(--ink);">Say hi</a>
+      <a href="mailto:contact.vennie.ho@gmail.com" style="fontSize:16px; lineHeight:24px; color:var(--text-subtle);">contact.vennie.ho@gmail.com</a>
+    </div>
+  </section>
+
+  <footer style="background:var(--band); color:var(--text-on-dark); padding:var(--space-40) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(24px,3vw,48px);">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--text-on-dark);">Vennie Ho</div>
+          <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted); marginTop:10px;">Footwear Designer &amp; Developer<br>From concept to production.</div>
+        </div>
+        <nav style="display:flex; flexDirection:column; gap:10px; fontSize:16px; lineHeight:24px;">
+          <a href="Work.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Work</a>
+          <a href="Services.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Services</a>
+          <a href="About.dc.html" style="color:var(--text-on-dark); padding:6px 0;">About</a>
+          <a href="Contact.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Contact</a>
+        </nav>
+        <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted);">
+          <a href="mailto:contact.vennie.ho@gmail.com" style="color:var(--text-on-dark);">contact.vennie.ho@gmail.com</a><br>Global
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--overlay-border-50); marginTop:clamp(28px,3.5vw,48px); paddingTop:20px; fontSize:16px; lineHeight:24px; color:var(--text-muted); display:flex; flexWrap:wrap; justifyContent:space-between; gap:10px 32px;">
+        <span>{{ copyright }}</span>
+        <span>Brand work shown for portfolio purposes. Trademarks belong to their owners. <a href="Work.dc.html#disclaimer" style="color:var(--text-on-dark); textDecoration:underline; textUnderlineOffset:3px;">Read the full disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
+      projects: [
+        { href: "ProjectDetail.dc.html", bg: "var(--accent-navy-deep)", pale: "var(--accent-navy-pale)", kicker: "Case study — 01", title: "Performance Running", line: "Knit upper development, CMF direction and technical packaging through to sample review.", services: "Design · CMF · Material · Technical development", image: "assets/home/case01_running.png", alt: "Black knit running shoe with turquoise three stripes, heel clip and midsole stripe" },
+        { href: "SportswearLifestyle.dc.html", bg: "var(--accent-orchid-deep)", pale: "var(--accent-orchid-pale)", kicker: "Case study — 02", title: "Sportswear / Lifestyle", line: "A range across five commercial models — silhouette, colour and material adapted per product.", services: "Design · CMF · Material direction · Development", image: "assets/sportswear/00_HERO_RANGE_CLEAR_v2.png", alt: "Six sneakers floating on black — a black and cream court shoe, a pink court shoe, a white and sage court shoe, a cream and silver court shoe, a navy and white court shoe and a cream knit slip-on with navy laces" },
+        { href: "SlidesCasual.dc.html", bg: "var(--accent-moss-deep)", pale: "var(--accent-moss-pale)", kicker: "Case study — 03", title: "Slides & Casual", line: "Moulded footbed and strap construction, developed for cost and manufacturability.", services: "Design · CMF · Technical · Development", image: "assets/slides/01_HERO_ZEVREZPRINT.png", alt: "Three ZevreZprint slides in black, taupe and navy with layered colour-blocked straps" }
+      ],
+      services: [
+        { num: "01", title: "Design", desc: "Creative footwear development from initial concept through silhouette, upper design, sole direction, colour and material development.", items: ["Concept development", "Design direction", "Silhouette development", "Upper design", "Sole / outsole design", "Colour & material"] },
+        { num: "02", title: "Technical", desc: "Translating design intent into clear technical information that can support product development and manufacturing.", items: ["Technical drawings", "Footwear tech packs", "BOM", "Material specifications", "Construction details", "Production notes"] },
+        { num: "03", title: "Development", desc: "Supporting products through sampling, material and construction decisions, revision and optimization.", items: ["Cost-driven design", "Material optimization", "Sample development", "Prototype review", "Design revision", "Product optimization"] },
+        { num: "04", title: "Production support", desc: "Helping bridge design intent and factory execution throughout the development process.", items: ["Technical consulting", "Manufacturing feasibility", "Factory communication", "Sample feedback", "Technical clarification", "Production issue support"] }
+      ],
+      steps: [
+        { num: "01", name: "Concept", line: "Define product direction, user need and design intention." },
+        { num: "02", name: "Design", line: "Develop silhouette, upper, sole direction, materials and visual identity." },
+        { num: "03", name: "Technical", line: "Translate the design into clear development and manufacturing information." },
+        { num: "04", name: "Sample", line: "Review physical execution, materials, construction and proportions." },
+        { num: "05", name: "Optimization", line: "Refine design, cost, materials, construction and production feasibility." },
+        { num: "06", name: "Production", line: "Support technical clarification and product execution." }
+      ],
+      reasons: [
+        { title: "Creative + technical", body: "Creative design combined with practical manufacturing knowledge — not designing for appearance alone." },
+        { title: "Cost awareness", body: "Materials, construction and production processes are weighed against target cost from the start." },
+        { title: "Production understanding", body: "Manufacturing feasibility is considered early rather than after the design is complete." },
+        { title: "Design ↔ factory", body: "Clear technical communication helps translate design intent into physical product." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

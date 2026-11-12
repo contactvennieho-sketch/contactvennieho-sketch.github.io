@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+</helmet>
+
+<div style="fontFamily:var(--font-sans); color:var(--ink);">
+<a href="{{ href }}" style="display:block; color:var(--ink); textDecoration:none;">
+
+  <sc-if value="{{ showPrivateAsset }}" hint-placeholder-val="{{ false }}">
+    <div style="position:relative; overflow:hidden; border:1px solid var(--border-subtle); ">
+      <div style="aspectRatio:{{ ratio }}; minHeight:200px; display:flex; alignItems:center; justifyContent:center; padding:{{ imgPad }};">
+        <img src="{{ image }}" alt="{{ alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block; transform:scale({{ imgZoom }});">
+      </div>
+      <span style="position:absolute; top:clamp(14px,2vw,22px); left:clamp(14px,2vw,22px); fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-on-dark); background:var(--chip); padding:6px 10px;">Private — pending approval</span>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isWithheld }}" hint-placeholder-val="{{ false }}">
+    <div class="on-ink" style="aspectRatio:{{ ratio }}; minHeight:220px; boxSizing:border-box; overflow:hidden; background:var(--band); color:var(--text-on-dark); display:flex; flexDirection:column; justifyContent:space-between; gap:clamp(12px,1.6vw,20px); padding:clamp(20px,2.4vw,36px);">
+      <div style="display:flex; justifyContent:space-between; alignItems:flex-start; gap:20px; flexWrap:wrap;">
+        <span style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-on-dark); border:1px solid var(--overlay-border-50); padding:8px 14px;">Under confidentiality</span>
+        <span style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-muted);">By request</span>
+      </div>
+      <sc-if value="{{ hasSoonImage }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1 1 0; minHeight:0; display:flex; alignItems:center; justifyContent:center; overflow:hidden;">
+          <img src="{{ soonImage }}" alt="Concept sketch, side views" loading="lazy" style="maxWidth:100%; maxHeight:100%; width:auto; height:auto; objectFit:contain; display:block;">
+        </div>
+      </sc-if>
+      <sc-if value="{{ showPanelTitle }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2.2vw,32px); lineHeight:1.05; letterSpacing:-0.02em; color:var(--text-on-dark);">{{ withheldTitle1 }}</div>
+          <div style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted); marginTop:10px;">{{ withheldTitle2 }}</div>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ true }}">
+    <sc-if value="{{ hasImage }}" hint-placeholder-val="{{ false }}">
+      <div style="overflow:hidden; border:1px solid var(--border-subtle); ">
+        <div style="aspectRatio:{{ ratio }}; minHeight:200px; display:flex; alignItems:center; justifyContent:center; padding:{{ imgPad }}; transition:transform 520ms cubic-bezier(.33,1,.68,1);" style-hover="transform:scale(1.025)">
+          <img src="{{ image }}" alt="{{ alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block; transform:scale({{ imgZoom }});">
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ noImage }}" hint-placeholder-val="{{ true }}">
+      <div style="overflow:hidden; border:1px solid var(--border-subtle);">
+        <div style="aspectRatio:{{ ratio }}; minHeight:200px; display:flex; alignItems:flex-end; padding:clamp(16px,2vw,28px);">
+          <span style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle);">{{ placeholderLine }}</span>
+        </div>
+      </div>
+    </sc-if>
+  </sc-if>
+
+  <div style="borderTop:1px solid var(--ink); paddingTop:20px; marginTop:20px; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:16px clamp(20px,3vw,48px); alignItems:baseline;">
+    <div style="minWidth:0;">
+      <div style="display:flex; flexWrap:nowrap; gap:12px; alignItems:baseline; minWidth:0;">
+        <span style="flexShrink:0; fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); color:var(--text-subtle);">{{ num }}</span>
+        <sc-if value="{{ isFeatured }}" hint-placeholder-val="{{ false }}">
+          <span style="minWidth:0; whiteSpace:nowrap; overflow:hidden; textOverflow:ellipsis; fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(18px,1.8vw,24px); lineHeight:1.1; letterSpacing:-0.02em; color:var(--ink);">{{ title }}</span>
+        </sc-if>
+        <sc-if value="{{ isStandard }}" hint-placeholder-val="{{ true }}">
+          <span style="minWidth:0; whiteSpace:nowrap; overflow:hidden; textOverflow:ellipsis; fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(18px,1.8vw,24px); lineHeight:1.1; letterSpacing:-0.02em; color:var(--ink);">{{ title }}</span>
+        </sc-if>
+      </div>
+      <div style="fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ role }}</div>
+    </div>
+    <div style="display:flex; flexDirection:column; gap:10px; alignItems:flex-start;">
+      <sc-if value="{{ hasAction }}" hint-placeholder-val="{{ true }}">
+      <span style="fontSize:13px; fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--ink); borderBottom:1px solid var(--ink); paddingBottom:3px;">{{ actionLabel }}</span>
+      </sc-if>
+    </div>
+  </div>
+</a>
+
+  <sc-if value="{{ hasProduct }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex; flexWrap:wrap; gap:6px 16px; alignItems:baseline; marginTop:14px;">
+      <span style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">{{ releaseLabel }}</span>
+      <a href="{{ productUrl }}" target="_blank" rel="noopener noreferrer" style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); borderBottom:1px solid var(--border-subtle); paddingBottom:2px;" style-hover="color:var(--ink); borderBottomColor:var(--ink);">{{ productLabel }} ↗</a>
+      <sc-if value="{{ hasCount }}" hint-placeholder-val="{{ false }}">
+        <span style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">{{ countLabel }}</span>
+      </sc-if>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:760,&quot;height&quot;:600},&quot;num&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;01&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;title&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Running / Performance Footwear&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;role&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Footwear Design &amp; Development&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;brand&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;adidas&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;season&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;FW25&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;services&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Design / Technical / Development&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;image&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;alt&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ratio&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;4 / 3&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;status&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;public&quot;,&quot;sanitized&quot;,&quot;private&quot;],&quot;default&quot;:&quot;sanitized&quot;,&quot;tsType&quot;:&quot;'public' | 'sanitized' | 'private'&quot;,&quot;section&quot;:&quot;Confidentiality&quot;},&quot;internal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Confidentiality&quot;},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Case study&quot;,&quot;Selected work&quot;],&quot;default&quot;:&quot;Selected work&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;featured&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;href&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;commercialRelease&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;officialBrandLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailerName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const status = p.status ?? "sanitized";
+    const internal = !!p.internal;
+    const comingSoon = status === "comingsoon";
+    const isPrivate = status === "private" || status === "withheld" || comingSoon;
+    // PRIVATE assets render only inside internal review; publicly they collapse to the confidentiality panel.
+    const showPrivateAsset = isPrivate && !comingSoon && internal && !!p.image;
+    const withheld = isPrivate && !showPrivateAsset;
+    return {
+      imgPad: p.imgPad ?? "clamp(28px,5%,80px)",
+      imgZoom: Number(p.zoom) || 1,
+      num: p.num ?? "01",
+      title: p.title ?? "Project title",
+      role: p.role ?? "Footwear Design & Development",
+      ratio: p.ratio ?? "4 / 3",
+      href: p.href ?? "#",
+      isWithheld: withheld,
+      withheldTitle1: comingSoon ? (p.title ?? "Coming soon") : "Selected development",
+      withheldTitle2: comingSoon ? ("Coming soon " + (p.soonLabel || "after SS27")) : "materials withheld",
+      hasSoonImage: comingSoon && !!p.soonImage,
+      showPanelTitle: !comingSoon,
+      soonImage: p.soonImage ?? "",
+      withheldBody: comingSoon ? "This project will be shared once the product has launched. More details available on request." : "Design and development material for this project is held back pending publication approval.",
+      isOpen: !isPrivate,
+      showPrivateAsset: showPrivateAsset,
+      image: p.image ?? "",
+      hasImage: !isPrivate && !!p.image,
+      noImage: !isPrivate && !p.image,
+      alt: p.alt ?? ((p.title ?? "Project") + " — footwear design and development work by Vennie"),
+      // Commercial release. Official brand listings are preferred over retailers.
+      hasProduct: false,
+      productUrl: p.officialBrandLink || p.retailUrl || "",
+      productLabel: p.officialBrandLink ? "View product" : (p.retailerName ? "View at " + p.retailerName : "View product"),
+      releaseLabel: p.officialBrandLink ? "Commercial release" : "Available at retail",
+      hasCount: Number(p.releaseCount) > 1,
+      countLabel: Number(p.releaseCount) + " products",
+      brandLine: "",
+      isFeatured: !!p.featured,
+      isStandard: !p.featured,
+      serviceLine: (p.services ?? "Design / CMF").split("/").map(s => s.trim()).join(" / "),
+      kindLabel: "Case study",
+      hasAction: !comingSoon,
+      actionLabel: comingSoon ? "Coming soon" : (showPrivateAsset ? "View project →" : (isPrivate ? "Private — approval pending" : "View project →")),
+      placeholderLine: (p.title ?? "Project") + " — image placeholder"
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Sportswear / Lifestyle — Vennie Ho</title>
+<meta name="description" content="A curated range of commercial and lifestyle footwear projects across silhouette, CMF, material direction and technical development.">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+<meta name="robots" content="noindex, nofollow">
+<style>
+html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent-magenta);}
+</style>
+</helmet>
+
+<div style="background:var(--surface); font-family:var(--font-sans); color:var(--ink); overflow-x:hidden;">
+
+  <header style="display:flex; flexWrap:wrap; alignItems:center; justifyContent:space-between; gap:20px 32px; maxWidth:1440px; margin:0 auto; padding:clamp(20px,2.6vw,38px) clamp(20px,3vw,38px);">
+    <a href="Home.dc.html" style="display:block;">
+      <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--ink);">Vennie Ho</div>
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:6px;">Footwear Designer &amp; Developer</div>
+    </a>
+    <nav style="display:flex; flexWrap:wrap; gap:14px clamp(20px,2.4vw,32px); alignItems:center; fontSize:16px; lineHeight:24px;">
+      <a href="Work.dc.html" aria-current="page" style="color:var(--ink); padding:6px 0; borderBottom:1px solid var(--ink);">Work</a>
+      <a href="Services.dc.html" style="color:var(--ink); padding:6px 0;">Services</a>
+      <a href="About.dc.html" style="color:var(--ink); padding:6px 0;">About</a>
+      <a href="Contact.dc.html" style="color:var(--ink); padding:6px 0;">Contact</a>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; gap:var(--space-4); background:var(--ink-strong); border:1px solid var(--ink-strong); borderRadius:var(--radius-sm); boxShadow:var(--shadow-sm); color:var(--surface); fontSize:14px; lineHeight:21px; fontWeight:500; padding:var(--space-10) var(--space-20);" style-hover="background:#000;">Start a project</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Range header" style="maxWidth:1440px; margin:0 auto; padding:clamp(40px,5vw,80px) clamp(20px,3vw,38px) clamp(32px,4vw,56px);">
+    <a href="Work.dc.html" style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle);">← All work</a>
+    <div style="display:flex; flexWrap:wrap; gap:12px 24px; alignItems:baseline; marginTop:clamp(28px,4vw,48px);">
+      <span style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); color:var(--text-subtle);">02</span>
+      <span style="fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">Multi-season range</span>
+    </div>
+    <h1 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(34px,5.2vw,92px); lineHeight:.95; letterSpacing:-0.02em; margin:16px 0 0;">Sportswear /<br>Lifestyle</h1>
+    <p style="fontSize:clamp(17px,1.3vw,20px); lineHeight:1.6; color:var(--text-subtle); maxWidth:52ch; margin:clamp(24px,3vw,36px) 0 0;">A curated range of commercial and lifestyle footwear projects.</p>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(180px,1fr)); gap:clamp(20px,3vw,40px); marginTop:clamp(36px,5vw,64px); borderTop:1px solid var(--border-subtle); paddingTop:clamp(20px,2.5vw,32px);">
+      <sc-for list="{{ metaRows }}" as="m" hint-placeholder-count="4">
+        <div>
+          <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">{{ m.label }}</div>
+          <div style="fontSize:16px; lineHeight:1.6; color:var(--ink); marginTop:10px;">{{ m.value }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Hero" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+    <sc-for list="{{ heroAssets }}" as="a" hint-placeholder-count="0">
+      <figure style="margin:0;">
+        <div style="position:relative; aspectRatio:1672 / 1011; minHeight:240px; overflow:hidden;">
+          <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:cover; display:block;">
+          <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute; top:18px; left:18px; background:var(--surface); border:1px solid var(--border-subtle); color:var(--text-subtle); fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; padding:6px 10px;">Private — pending approval</span>
+          </sc-if>
+        </div>
+      </figure>
+    </sc-for>
+  </section>
+
+  <section data-screen-label="Overview" style="maxWidth:1440px; margin:0 auto; padding:clamp(56px,7vw,112px) clamp(20px,3vw,38px);">
+    <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(24px,3vw,40px);">01 / Overview</div>
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(340px,1fr)); gap:clamp(32px,5vw,80px); alignItems:start;">
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.2vw,46px); lineHeight:1.05; letterSpacing:-0.02em; margin:0;">Commercial footwear across multiple lifestyle directions</h2>
+      <div>
+        <p style="fontSize:clamp(17px,1.3vw,20px); lineHeight:1.6; color:var(--text-subtle); margin:0; maxWidth:56ch;">This selected range covers sportswear and lifestyle footwear across several separate projects, including silhouette development, colour and material exploration, product variation and technical development.</p>
+        <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); margin:clamp(18px,2.5vw,28px) 0 0; maxWidth:56ch;">The models shown are individual projects rather than one collection.</p>
+        <div style="borderTop:1px solid var(--border-subtle); marginTop:clamp(28px,3.5vw,44px); paddingTop:clamp(20px,2.5vw,28px);">
+          <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:14px;">Models in this range</div>
+          <div style="display:flex; flexWrap:wrap; gap:10px 24px; fontFamily:var(--font-display); fontSize:clamp(17px,1.7vw,24px); lineHeight:1.2;">
+            <sc-for list="{{ models }}" as="m" hint-placeholder-count="5">
+              <span>{{ m }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Design range" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,64px); alignItems:end;">
+      <div>
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(16px,2vw,28px);">02 / Design range</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,44px); lineHeight:1.05; margin:0;">Different products,<br>different problems</h2>
+      </div>
+    </div>
+    <figure style="margin:clamp(36px,5vw,72px) 0 0;">
+      <div style="position:relative; aspectRatio:1663 / 946;">
+        <img src="assets/sportswear/02_DESIGN_RANGE_BOARD_DARK_v2.png" alt="Design board on dark grey of three sneakers — a white and sage lifestyle court shoe, a black knit slip-on walking shoe with white straps and a navy and white court sneaker — each with its challenge, design response, detail crops, material swatches and sketches" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+      </div>
+    </figure>
+  </section>
+
+  <section data-screen-label="Commercial direction" class="on-ink" style="background:var(--band); color:var(--text-on-dark); padding:clamp(72px,9vw,144px) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <p style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(24px,3.4vw,52px); lineHeight:1.1; letterSpacing:-0.02em; margin:0; color:var(--text-on-dark); maxWidth:34ch;">Different product briefs require different visual languages, proportions and levels of technical complexity.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Colour and material" style="maxWidth:1440px; margin:0 auto; padding:clamp(56px,7vw,112px) clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,64px); alignItems:end;">
+      <div>
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(16px,2vw,28px);">03 / Colour &amp; material</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.2vw,48px); lineHeight:1.02; margin:0;">Colour and material<br>per product</h2>
+      </div>
+      <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); margin:0; maxWidth:50ch;">Each model carries its own colour and material direction. Material choice has to support appearance, cost and manufacturing at the same time, so colour and material are resolved together rather than applied afterwards.</p>
+    </div>
+
+    <sc-for list="{{ cmfLead }}" as="a" hint-placeholder-count="3">
+      <figure style="margin:clamp(36px,5vw,72px) 0 0;">
+        <div style="aspectRatio:1755 / 355; minHeight:220px; display:flex; alignItems:center; justifyContent:center; padding:0;">
+          <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+        </div>
+        <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
+      </figure>
+    </sc-for>
+
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(18px,2.6vw,32px); marginTop:clamp(24px,3.5vw,48px);">
+      <sc-for list="{{ cmfRow }}" as="a" hint-placeholder-count="3">
+        <figure style="margin:0;">
+          <div style="aspectRatio:5 / 3; minHeight:150px; display:flex; alignItems:center; justifyContent:center; padding:clamp(14px,5%,30px);">
+            <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+          </div>
+          <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ a.caption }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+
+    <sc-for list="{{ cmfContrast }}" as="a" hint-placeholder-count="1">
+      <figure style="margin:clamp(32px,4.5vw,64px) 0 0;">
+        <div style="aspectRatio:16 / 7; minHeight:220px; display:flex; alignItems:center; justifyContent:center; padding:clamp(24px,5%,72px);">
+          <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+        </div>
+        <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
+      </figure>
+    </sc-for>
+
+    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(18px,2.6vw,32px); marginTop:clamp(24px,3.5vw,48px);">
+      <sc-for list="{{ cmfPair }}" as="a" hint-placeholder-count="1">
+        <figure style="margin:0;">
+          <div style="aspectRatio:5 / 3; minHeight:160px; display:flex; alignItems:center; justifyContent:center; padding:clamp(16px,5%,36px);">
+            <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+          </div>
+          <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ a.caption }}</figcaption>
+        </figure>
+      </sc-for>
+      <div style="borderTop:1px solid var(--ink); paddingTop:18px;">
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:14px;">Material directions used</div>
+        <ul style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column; gap:8px; fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">
+          <sc-for list="{{ materialDirections }}" as="m" hint-placeholder-count="5">
+            <li>{{ m }}</li>
+          </sc-for>
+        </ul>
+        <p style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); lineHeight:1.9; margin:20px 0 0;">Material codes and supplier detail are not published.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Product variation" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,64px); alignItems:start;">
+      <div>
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(16px,2vw,28px);">04 / Product variation</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,44px); lineHeight:1.05; margin:0;">Designing for different<br>product identities</h2>
+        <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); maxWidth:48ch; margin:clamp(20px,3vw,32px) 0 0;">Silhouette, proportion, material and colour are adjusted to suit each product direction rather than carried across from one model to the next.</p>
+      </div>
+      <div>
+        <sc-for list="{{ variation }}" as="v" hint-placeholder-count="4">
+          <div style="borderBottom:1px solid var(--border-subtle); padding:clamp(16px,2vw,22px) 0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(150px,1fr)); gap:8px 24px; alignItems:baseline;">
+            <span style="fontWeight:600; fontSize:clamp(15px,1.2vw,19px); letterSpacing:0.03em; textTransform:uppercase;">{{ v.model }}</span>
+            <span style="fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">{{ v.note }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Development" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,64px); alignItems:end;">
+      <div>
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(16px,2vw,28px);">05 / Development</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,44px); lineHeight:1.05; margin:0;">Physical product<br>execution</h2>
+      </div>
+      <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); margin:0; maxWidth:50ch;">Selected development imagery showing physical product execution during the development process.</p>
+    </div>
+    <sc-for list="{{ sampleAssets }}" as="a" hint-placeholder-count="0">
+      <figure style="margin:clamp(36px,5vw,72px) 0 0;">
+        <div style="position:relative; aspectRatio:1774 / 887; minHeight:240px; display:flex; alignItems:center; justifyContent:center; padding:clamp(16px,3%,40px);">
+          <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+          <sc-if value="{{ a.private }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute; top:16px; left:16px; background:var(--surface); border:1px solid var(--border-subtle); color:var(--text-subtle); fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; padding:6px 10px;">Private — pending approval</span>
+          </sc-if>
+        </div>
+        <figcaption style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
+      </figure>
+    </sc-for>
+    <sc-if value="{{ sampleEmpty }}" hint-placeholder-val="{{ true }}">
+      <div style="border:1px dashed var(--border-subtle); marginTop:clamp(36px,5vw,72px); padding:clamp(28px,4vw,48px); display:flex; flexDirection:column; gap:10px;">
+        <span style="fontSize:13px; fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle);">Sample imagery slot</span>
+        <span style="fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">Withheld from the public build</span>
+      </div>
+    </sc-if>
+  </section>
+
+  <section data-screen-label="Technical development" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,64px); alignItems:end;">
+      <div>
+        <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(16px,2vw,28px);">06 / Technical development</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,44px); lineHeight:1.05; margin:0;">Design intent into<br>product information</h2>
+      </div>
+      <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); margin:0; maxWidth:50ch;">Technical development supported the translation of design intent into clearer product and construction information.</p>
+    </div>
+    <div style="marginTop:clamp(32px,4vw,56px);">
+      <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:14px;">Technical documentation</div>
+      <ul style="listStyle:none; margin:0; padding:0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:0 clamp(24px,3vw,48px);">
+        <sc-for list="{{ documentation }}" as="d" hint-placeholder-count="5">
+          <li style="borderBottom:1px solid var(--border-subtle); padding:14px 0; fontSize:16px; lineHeight:1.5; color:var(--ink);">{{ d }}</li>
+        </sc-for>
+      </ul>
+      <p style="fontSize:12px; lineHeight:1.6; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); margin:20px 0 0;">Available on request</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Range summary" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px);">
+      <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(20px,2.5vw,36px);">07 / Range summary</div>
+      <p style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2.6vw,38px); lineHeight:1.15; letterSpacing:-0.02em; margin:0; maxWidth:38ch;">A varied sportswear and lifestyle range across several separate product directions.</p>
+      <p style="fontSize:clamp(17px,1.3vw,20px); lineHeight:1.6; color:var(--text-subtle); maxWidth:62ch; margin:clamp(28px,3.5vw,44px) 0 0;">The work spans footwear design, colour and material, product variation and technical development, adapted to each product rather than applied as one house style.</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ hasProduct }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Market release" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+      <div style="borderTop:1px solid var(--border-subtle); paddingTop:clamp(24px,3vw,40px); display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(24px,3vw,48px); alignItems:start;">
+        <div>
+          <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">Market release</div>
+          <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2.6vw,38px); lineHeight:1.1; letterSpacing:-0.02em; margin:0;">Commercial release</h2>
+        </div>
+        <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:48ch;">Selected work from this project was commercially released and listed through brand and/or retail channels.</p>
+      </div>
+      <div style="marginTop:clamp(28px,3.4vw,48px);">
+        <sc-for list="{{ releases }}" as="r" hint-placeholder-count="2">
+          <div style="borderTop:1px solid var(--border-subtle); padding:clamp(18px,2.2vw,26px) 0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:14px clamp(20px,3vw,48px); alignItems:start;">
+            <div style="minWidth:0;">
+              <div style="fontSize:clamp(16px,1.4vw,19px); fontWeight:500; color:var(--ink);">{{ r.name }}</div>
+              <div style="fontSize:14px; lineHeight:1.5; color:var(--text-subtle); marginTop:6px; maxWidth:40ch;">{{ r.note }}</div>
+            </div>
+            <div style="display:flex; flexDirection:column; gap:10px; alignItems:flex-start; minWidth:0;">
+              <sc-if value="{{ r.hasPrimary }}" hint-placeholder-val="{{ true }}">
+                <a href="{{ r.url }}" target="_blank" rel="noopener noreferrer" style="fontSize:12px; fontWeight:600; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); borderBottom:1px solid var(--ink); paddingBottom:3px;" style-hover="color:var(--accent-magenta); borderBottomColor:var(--accent-magenta);">{{ r.label }} ↗</a>
+              </sc-if>
+              <sc-if value="{{ r.isArchiveOnly }}" hint-placeholder-val="{{ false }}">
+                <span style="fontSize:12px; fontWeight:600; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-on-dark); background:var(--chip); padding:6px 10px;">Commercial release</span>
+              </sc-if>
+              <sc-for list="{{ r.secondary }}" as="s" hint-placeholder-count="0">
+                <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" style="fontSize:12px; fontWeight:500; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); borderBottom:1px solid var(--border-subtle); paddingBottom:3px;" style-hover="color:var(--ink); borderBottomColor:var(--ink);">{{ s.label }} ↗</a>
+              </sc-for>
+            </div>
+            <sc-if value="{{ r.showProof }}" hint-placeholder-val="{{ false }}">
+              <figure style="margin:0; minWidth:0;">
+                <div style="aspectRatio:16 / 10; overflow:hidden;">
+                  <img src="{{ r.proofImage }}" alt="{{ r.proofAlt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+                </div>
+                <figcaption style="fontSize:12px; lineHeight:1.4; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ r.archivedLine }}</figcaption>
+              </figure>
+            </sc-if>
+            <sc-if value="{{ r.noProof }}" hint-placeholder-val="{{ true }}">
+              <span aria-hidden="true"></span>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+
+  <section data-screen-label="Next project" style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px) clamp(56px,7vw,112px);">
+    <a href="SlidesCasual.dc.html" style="display:block;">
+      <div style="fontSize:var(--size-micro); fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(20px,2.5vw,32px);">Next project</div>
+      <div style="aspectRatio:16 / 6; minHeight:200px; display:flex; alignItems:center; justifyContent:center; padding:clamp(24px,5%,72px);">
+        <sc-if value="{{ hasNext }}" hint-placeholder-val="{{ false }}">
+          <img src="{{ next.image }}" alt="{{ next.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+        </sc-if>
+      </div>
+      <div style="borderTop:1px solid var(--ink); paddingTop:20px; marginTop:20px; display:flex; flexWrap:wrap; justifyContent:space-between; alignItems:baseline; gap:12px 32px;">
+        <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.2vw,48px); lineHeight:1.02;">{{ next.title }}</span>
+        <span style="fontSize:13px; fontWeight:600; letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; borderBottom:1px solid var(--ink); paddingBottom:3px;">View project →</span>
+      </div>
+    </a>
+  </section>
+
+  <section id="contact" data-screen-label="CTA" class="on-ink" style="background:var(--band); color:var(--text-on-dark); padding:clamp(56px,7vw,112px) 0 clamp(56px,7vw,96px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(38px,6.4vw,96px); lineHeight:.95; letterSpacing:-0.02em; margin:0; color:var(--text-on-dark);">Have a project<br>in mind?</h2>
+      <p style="fontSize:clamp(17px,1.3vw,20px); lineHeight:1.6; color:var(--text-muted); maxWidth:52ch; margin:clamp(28px,4vw,44px) 0 0;">From initial concept to technical development, sampling and production support.</p>
+      <div style="display:flex; flexWrap:wrap; gap:16px 28px; alignItems:center; marginTop:clamp(36px,4.5vw,56px);">
+        <a href="mailto:contact.vennie.ho@gmail.com" style="display:inline-flex; alignItems:center; justifyContent:center; background:transparent; border:1px solid var(--overlay-border-50); borderRadius:var(--radius-pill-lg); color:var(--text-on-dark); fontSize:16px; lineHeight:24px; fontWeight:700; padding:clamp(20px,3vw,32px) clamp(40px,8vw,96px);" style-hover="borderColor:var(--text-on-dark);">Say hi</a>
+        <a href="Services.dc.html" style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase; color:var(--text-on-dark); borderBottom:1px solid var(--overlay-border-50); paddingBottom:4px;">View services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="on-ink" style="background:var(--band); color:var(--text-on-dark); padding:0 0 clamp(32px,4vw,56px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(28px,4vw,56px); borderTop:1px solid var(--overlay-border-50); paddingTop:clamp(36px,4.5vw,64px);">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3vw,40px); letterSpacing:-0.02em; color:var(--text-on-dark);">Vennie Ho</div>
+          <div style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); marginTop:14px; lineHeight:1.9;">Footwear Designer &amp; Developer<br>From concept to production.</div>
+        </div>
+        <nav style="display:flex; flexDirection:column; gap:12px; fontSize:var(--size-micro); letterSpacing:var(--tracking-caps-wide); textTransform:uppercase;">
+          <a href="Work.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Work</a>
+          <a href="Services.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Services</a>
+          <a href="About.dc.html" style="color:var(--text-on-dark); padding:6px 0;">About</a>
+          <a href="Contact.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Contact</a>
+        </nav>
+        <div style="fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); lineHeight:1.9;">
+          <a href="mailto:contact.vennie.ho@gmail.com" style="color:var(--text-on-dark);">contact.vennie.ho@gmail.com</a><br>Global
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--overlay-border-50); marginTop:clamp(36px,4.5vw,64px); paddingTop:24px; fontSize:var(--size-micro); letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-muted); display:flex; flexWrap:wrap; justifyContent:space-between; gap:10px 32px;">
+        <span>{{ copyright }}</span>
+        <span>Brand work shown for portfolio purposes. Trademarks belong to their owners. <a href="Work.dc.html#disclaimer" style="color:var(--text-on-dark); textDecoration:underline; textUnderlineOffset:3px;">Read the full disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;internalReview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Confidentiality&quot;},&quot;commercialRelease&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;officialBrandLink&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;},&quot;retailerName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Commercial release&quot;}}">
+// Multi-project range. Each asset belongs to a named model — never merged into one product family.
+const ASSETS = [
+  { image: "assets/sportswear/04a_CMF_BERRADA.png", caption: "Berrada Decode — three colourways", stage: "CMF_LEAD", model: "Berrada Decode", sortOrder: 4, visibility: "sanitized", internalNotes: "", alt: "Three Berrada Decode colourway drawings — off-white, black and navy — each with its colour swatches" },
+  { image: "assets/sportswear/04b_CMF_NANOOKS.png", caption: "Nanooks — three colourways", stage: "CMF_LEAD", model: "Nanooks", sortOrder: 5, visibility: "sanitized", internalNotes: "", alt: "Three Nanooks colourway drawings — black with cream and gum sole, blue with orange stripes, and burgundy with cream stripes — each with its colour swatches" },
+  { image: "assets/sportswear/04c_CMF_GAARCIA.png", caption: "Gaarcia Lite — three colourways", stage: "CMF_LEAD", model: "Gaarcia Lite", sortOrder: 6, visibility: "sanitized", internalNotes: "", alt: "Three Gaarcia Lite colourway drawings — white with navy and red, black with red, and cream with brown — each with its colour swatches" },
+  { image: "assets/sportswear/00_HERO_RANGE_v2.png", caption: "Sportswear / Lifestyle — selected range", stage: "HERO", model: "Range", sortOrder: 1, visibility: "sanitized", internalNotes: "Composite range visual. adidas marks visible — clearance required", alt: "Six sneakers floating on black — a black and cream court shoe, a pink court shoe, a white and sage court shoe, a cream and silver court shoe, a navy and white court shoe and a cream knit slip-on with navy laces" },
+  { image: "assets/sportswear/02_DESIGN_BERRADA_DECODE.png", caption: "Berrada Decode — terrace silhouette, gum tooling", stage: "DESIGN", model: "Berrada Decode", sortOrder: 2, visibility: "sanitized", internalNotes: "adidas trademark visible — clearance required", alt: "Off white terrace-style sneaker with black three stripes and a thick gum sole" },
+  { image: "assets/sportswear/03_DESIGN_CLOUD_WALK.png", caption: "Cloud Walk FW25 — cushioned walking silhouette", stage: "DESIGN", model: "Cloud Walk", sortOrder: 3, visibility: "sanitized", internalNotes: "adidas trademark and cloudfoam branding visible — clearance required", alt: "Black low-profile walking shoe with white perforated three stripes and a cloudfoam midsole" },
+  { image: "assets/sportswear/04_CMF_GAARCIA_COLOURWAYS.png", caption: "Gaarcia Lite — three colourways", stage: "UNUSED", model: "Gaarcia Lite", sortOrder: 4, visibility: "sanitized", internalNotes: "Material code board cropped out", alt: "Three Gaarcia Lite colourway drawings — white with navy and red, black with red, and cream with brown — each with its colour swatches" },
+  { image: "assets/sportswear/06_CMF_MURPHEE_GREEN.png", caption: "Murphee — court green", stage: "UNUSED", model: "Murphee", sortOrder: 5, visibility: "sanitized", internalNotes: "Material code board cropped out", alt: "Murphee sneaker in court green with white three stripes and gum sole" },
+  { image: "assets/sportswear/07_CMF_MURPHEE_BLUE.png", caption: "Murphee — dusky petrol", stage: "UNUSED", model: "Murphee", sortOrder: 6, visibility: "sanitized", internalNotes: "Material code board cropped out", alt: "Murphee sneaker in dusky petrol with black and pale blue three stripes" },
+  { image: "assets/sportswear/08_CMF_NANOOKS_OLIVE.png", caption: "Nanooks — olive", stage: "UNUSED", model: "Nanooks", sortOrder: 7, visibility: "sanitized", internalNotes: "adidas trademark visible — clearance required", alt: "Nanooks sneaker in off white with olive overlays and pale green three stripes" },
+  { image: "assets/sportswear/05_CMF_GAARCIA_BLACK_RED.png", caption: "Gaarcia Lite — black and pure ruby", stage: "UNUSED", model: "Gaarcia Lite", sortOrder: 8, visibility: "hidden", internalNotes: "Material code board cropped out", alt: "Gaarcia Lite sneaker in core black with pure ruby three stripes and heel patch" },
+  { image: "assets/sportswear/09_CMF_NANOOKS_BLUE_ORANGE.png", caption: "Nanooks — blue and orange", stage: "UNUSED", model: "Nanooks", sortOrder: 9, visibility: "sanitized", internalNotes: "adidas trademark visible — clearance required", alt: "Nanooks sneaker in two-tone blue with orange three stripes" },
+  { image: "assets/sportswear/10_FINAL_SAMPLE_BERRADA.png", caption: "Berrada Decode — final sample", stage: "SAMPLE", model: "Berrada Decode", sortOrder: 10, visibility: "public", internalNotes: "Cleared for public use by Vennie", alt: "Black leather Berrada Decode final sample with a translucent gum sole, shown from both sides, the outsole, heel and front" },
+  { image: "assets/sportswear/11_TECHNICAL_NANOOKS_PRIVATE.png", caption: "Nanooks SS2026 — technical package excerpt", stage: "TECHNICAL", model: "Nanooks", sortOrder: 11, visibility: "public", internalNotes: "Full technical page with material codes and designer name. Never publish", alt: "Technical package page showing component colour breakdown for the Nanooks sneaker" },
+  { image: "assets/sportswear/12_TECHNICAL_BERRADA_PRIVATE.png", caption: "Berrada Decode SS2027 — technical package excerpt", stage: "TECHNICAL", model: "Berrada Decode", sortOrder: 12, visibility: "public", internalNotes: "SS2027 unreleased, plus supplier names and material codes. Never publish", alt: "Technical package page showing construction callouts and material breakdown for the Berrada Decode" }
+];
+
+const RELEASES = [
+  {
+    "commercialRelease": true,
+    "productName": "Gaarcia Lite Sneakers",
+    "brandName": "adidas",
+    "officialBrandUrl": "https://www.adidas.co.in/gaarcia-lite-sneakers/KK1651.html",
+    "linkStatus": "active",
+    "releaseSource": "adidas India",
+    "releaseDate": "",
+    "retailLinks": [
+      {
+        "retailer": "Nykaa Man",
+        "url": "https://www.nykaaman.com/adidas-gaarcia-lite-sneakers-men-black/p/20931552?skuId=20931220",
+        "region": "India",
+        "active": true
+      }
+    ],
+    "archivedProofImage": "assets/proof/gaarcia_adidas.png",
+    "proofCaptured": "September 2026",
+    "showProofAsBackup": false,
+    "marketReleaseNote": "Commercially released product."
+  },
+  {
+    "commercialRelease": true,
+    "productName": "Nanooks Colourblocked Sneakers",
+    "brandName": "adidas",
+    "officialBrandUrl": "",
+    "linkStatus": "none",
+    "releaseSource": "Myntra",
+    "releaseDate": "",
+    "retailLinks": [
+      {
+        "retailer": "Myntra",
+        "url": "https://www.myntra.com/casual-shoes/adidas/adidas-men-nanooks-colourblocked-sneakers/38619318/buy",
+        "region": "India",
+        "active": true
+      },
+      {
+        "retailer": "Nykaa Man",
+        "url": "https://www.nykaaman.com/adidas-nanooks-sneakers-men-white/p/20931548?skuId=20931192",
+        "region": "India",
+        "active": true
+      }
+    ],
+    "archivedProofImage": "assets/proof/nanooks_myntra.png",
+    "proofCaptured": "September 2026",
+    "showProofAsBackup": false,
+    "marketReleaseNote": "Commercially released product. No official brand page supplied."
+  }
+];
+
+// ---- Commercial-release fallback chain -------------------------------------
+// 1. active officialBrandUrl        -> "View on <brand>"
+// 2. else first active retailLink   -> "View retail listing"
+// 3. else archivedProofImage        -> COMMERCIAL RELEASE + archived screenshot
+// 4. else                           -> hidden entirely (no evidence, no claim)
+// Links can be switched to inactive later without touching the layout.
+function buildReleases(list) {
+  return (list || []).filter(function (r) { return r.commercialRelease; }).map(function (r) {
+    var officialLive = r.linkStatus === "active" && !!r.officialBrandUrl;
+    var retail = (r.retailLinks || []).filter(function (l) { return l.active && l.url; });
+
+    var primary = null, secondary = [];
+    if (officialLive) {
+      primary = { url: r.officialBrandUrl, label: "View on " + (r.brandName || "brand") };
+      secondary = retail.map(function (l) {
+        return { url: l.url, label: "Also at " + l.retailer + (l.region && l.retailer.indexOf(l.region) === -1 ? " (" + l.region + ")" : "") };
+      });
+    } else if (retail.length) {
+      primary = { url: retail[0].url, label: "View retail listing" };
+      secondary = retail.slice(1).map(function (l) {
+        return { url: l.url, label: "Also at " + l.retailer + (l.region && l.retailer.indexOf(l.region) === -1 ? " (" + l.region + ")" : "") };
+      });
+    }
+
+    // Archived proof stands in only when nothing is reachable, or when explicitly
+    // kept as backup evidence alongside a live link.
+    var proofAsFallback = !primary && !!r.archivedProofImage;
+    var proofAsBackup = !!primary && !!r.archivedProofImage && !!r.showProofAsBackup;
+    if (!primary && !proofAsFallback) return null;
+
+    var archivedLine = "";
+    if (proofAsFallback || proofAsBackup) {
+      archivedLine = "Archived listing — " + (r.releaseSource || r.brandName || "brand channel");
+      if (r.proofCaptured) archivedLine += ", " + r.proofCaptured;
+    }
+
+    return {
+      name: r.productName,
+      note: r.marketReleaseNote || "Commercially released product.",
+      hasPrimary: !!primary,
+      url: primary ? primary.url : "",
+      label: primary ? primary.label : "",
+      secondary: secondary,
+      hasSecondary: secondary.length > 0,
+      isArchiveOnly: proofAsFallback,
+      showProof: proofAsFallback || proofAsBackup,
+      noProof: !(proofAsFallback || proofAsBackup),
+      proofImage: r.archivedProofImage || "",
+      proofAlt: r.productName + " — archived " + (r.releaseSource || "product") + " listing",
+      archivedLine: archivedLine,
+      releaseDate: r.releaseDate || ""
+    };
+  }).filter(Boolean);
+}
+
+class Component extends DCLogic {
+  renderVals() {
+    // Private prototype: real confidential assets render. Flip off for the public production build.
+    const internalReview = this.props.internalReview ?? false;
+    const visible = ASSETS
+      .filter(a => a.visibility !== "private" || internalReview)
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+      .map(a => ({ ...a, private: a.visibility === "private" }));
+    const byStage = s => visible.filter(a => a.stage === s);
+
+    const sampleAssets = byStage("SAMPLE");
+    const technicalAssets = byStage("TECHNICAL");
+
+    return {
+      copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
+      releases: buildReleases(RELEASES),
+      hasProduct: buildReleases(RELEASES).length > 0,
+      metaRows: [
+        { label: "Role", value: "Footwear Design & Development" },
+        { label: "Category", value: "Sportswear / Lifestyle" },
+        { label: "Scope", value: "Design · CMF · Product development · Technical development" }
+      ],
+      models: ["Gaarcia Lite", "Murphee", "Nanooks", "Berrada Decode", "Cloud Walk"],
+      materialDirections: ["Leather and PU synthetic uppers", "Suede and nubuck overlays", "Textile and honeycomb synthetic", "Gum and rubber tooling", "EVA-related midsoles"],
+      variation: [
+        { model: "Gaarcia Lite", note: "Clean court silhouette, neutral and high-contrast colourways" },
+        { model: "Murphee", note: "Terrace proportion, gum tooling, tonal colour blocking" },
+        { model: "Nanooks", note: "Suede and textile mix, two-tone and accent directions" },
+        { model: "Berrada Decode", note: "Chunkier tooling, synthetic upper, technical construction" },
+        { model: "Cloud Walk", note: "Cushioned walking silhouette, comfort-led construction" }
+      ],
+      documentation: ["Tech pack", "BOM", "Material specification", "Construction callouts", "Colour and component breakdown"],
+
+      heroAssets: byStage("HERO"),
+      designAssets: byStage("DESIGN"),
+      cmfLead: byStage("CMF_LEAD"),
+      cmfRow: byStage("CMF_ROW"),
+      cmfContrast: byStage("CMF_CONTRAST"),
+      cmfPair: byStage("CMF_PAIR"),
+      sampleAssets: sampleAssets,
+      sampleEmpty: sampleAssets.length === 0,
+      technicalAssets: technicalAssets,
+      technicalEmpty: technicalAssets.length === 0,
+
+      next: { title: "Slides & Casual", image: "assets/slides/01_HERO_ZEVREZPRINT.png", alt: "Three ZevreZprint slides in black, taupe and navy with layered colour-blocked straps" },
+      hasNext: true
+    };
+  }
+}
+</script>
+</body>
+</html>

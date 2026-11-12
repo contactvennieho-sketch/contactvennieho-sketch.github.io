@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Footwear Design & Development Services — Vennie Ho</title>
+<meta name="description" content="Design, technical, development and production support for footwear projects at any stage, from concept to production.">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/fonts.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/colors.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/typography.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/spacing.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/radii.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/elevation.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
+<link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
+<script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mm-ds/tokens.css">
+<style>
+html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:var(--ink);text-decoration:none;}
+a:hover{color:var(--accent-magenta);}
+/* Swipe rows: on phones and small tablets, long stacks become one horizontal row */
+.rail-hint{display:none;}
+@media (max-width: 760px){
+  .h-rail{display:flex !important;flex-wrap:nowrap !important;align-items:stretch !important;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:16px !important;margin:0 -20px;padding:0 20px 4px;scroll-padding-left:20px;}
+  .h-rail--edge{margin:0 !important;}
+  .h-rail::-webkit-scrollbar{display:none;}
+  .h-rail > *{flex:0 0 84%;min-width:0;scroll-snap-align:start;box-sizing:border-box;}
+  .h-rail--small > *{flex-basis:72%;}
+  .h-rail--stack > *{position:static !important;margin-bottom:0 !important;}
+  .h-rail--stack > * > div{height:100%;box-sizing:border-box;grid-template-columns:minmax(0,1fr) !important;}
+  .h-rail--stack > * > div > div:last-child{justify-content:center;}
+  .h-rail--cards > * > div > div{grid-template-columns:minmax(0,1fr) !important;}
+  .h-rail--rows > *{border:1px solid var(--border-subtle) !important;padding:20px !important;}
+  .h-rail--cards > *{border:1px solid var(--border-subtle);padding-top:40px !important;padding-bottom:40px !important;}
+  .steps-row{grid-template-columns:repeat(7,max-content) !important;gap:20px !important;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none;}
+  .steps-row > *{min-width:0 !important;}
+  .rail-hint{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-subtle);}
+  .rail-hint span:last-child, .rail-hint:not(:has(span)){font-size:20px;letter-spacing:0;line-height:1;}
+}
+</style>
+</helmet>
+
+<div style="background:var(--surface); fontFamily:var(--font-sans); color:var(--ink); overflowX:hidden;">
+
+  <header style="display:flex; flexWrap:wrap; alignItems:center; justifyContent:space-between; gap:20px 32px; maxWidth:1440px; margin:0 auto; padding:clamp(20px,2.6vw,38px) clamp(20px,3vw,38px);">
+    <a href="Home.dc.html" style="display:block;">
+      <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--ink);">Vennie Ho</div>
+      <div style="fontFamily:var(--font-sans); fontWeight:500; fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--ink); marginTop:6px;">Footwear Designer &amp; Developer</div>
+    </a>
+    <nav style="display:flex; flexWrap:wrap; gap:14px clamp(20px,2.4vw,32px); alignItems:center; fontSize:16px; lineHeight:24px;">
+      <a href="Work.dc.html" style="color:var(--ink); padding:6px 0;">Work</a>
+      <a href="Services.dc.html" style="color:var(--ink); padding:6px 0; borderBottom:1px solid var(--ink);">Services</a>
+      <a href="About.dc.html" style="color:var(--ink); padding:6px 0;">About</a>
+      <a href="Contact.dc.html" style="color:var(--ink); padding:6px 0;">Contact</a>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; gap:var(--space-4); background:var(--ink-strong); border:1px solid var(--ink-strong); borderRadius:var(--radius-sm); boxShadow:var(--shadow-sm); color:var(--surface); fontSize:14px; lineHeight:21px; fontWeight:500; padding:var(--space-10) var(--space-20);" style-hover="background:#000;">Start a project</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Services intro" style="maxWidth:1440px; margin:0 auto; padding:clamp(40px,6vw,96px) clamp(20px,3vw,38px) clamp(48px,6vw,96px);">
+    <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle);">Services</div>
+    <h1 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(44px,7.2vw,110px); lineHeight:0.95; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0;">From design<br>to development.</h1>
+    <nav aria-label="Services" style="display:flex; flexWrap:wrap; gap:12px; marginTop:clamp(32px,4vw,56px); borderTop:1px solid var(--border-subtle); paddingTop:clamp(20px,2.4vw,30px);">
+      <sc-for list="{{ serviceNames }}" as="n" hint-placeholder-count="4">
+        <a href="{{ n.href }}" style="display:inline-flex; alignItems:center; minHeight:44px; boxSizing:border-box; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-sm); color:var(--ink); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20);" style-hover="borderColor:var(--ink); color:var(--ink);">{{ n.label }}</a>
+      </sc-for>
+    </nav>
+  </section>
+
+  <div class="rail-hint" aria-hidden="true" style="padding:0 20px 16px;"><span>4 services</span><span>→</span></div>
+  <div class="h-rail h-rail--edge h-rail--cards" role="region" aria-label="Services — scroll sideways for more" tabIndex="0">
+  <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+    <section id="{{ s.id }}" data-screen-label="Service" style="scrollMarginTop:16px; background:{{ s.bg }}; padding:clamp(48px,6vw,96px) 0;">
+      <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+        <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(24px,3vw,56px); alignItems:end;">
+          <div>
+            <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">{{ s.label }}</div>
+            <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(34px,4.6vw,72px); lineHeight:1; letterSpacing:-0.02em; margin:0;">{{ s.title }}</h2>
+          </div>
+        </div>
+
+        <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(24px,3vw,48px); marginTop:clamp(32px,4vw,64px);">
+          <div style="borderTop:1px solid var(--ink); paddingTop:18px;">
+            <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:18px;">What this covers</div>
+            <ul style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column; gap:9px; fontSize:16px; lineHeight:1.5; color:var(--ink);">
+              <sc-for list="{{ s.capabilities }}" as="c" hint-placeholder-count="6">
+                <li>{{ c }}</li>
+              </sc-for>
+            </ul>
+          </div>
+          <div style="borderTop:1px solid var(--border-subtle); paddingTop:18px;">
+            <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:18px;">You may need this if</div>
+            <ul style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column; gap:12px; fontSize:16px; lineHeight:1.5; color:var(--text-subtle);">
+              <sc-for list="{{ s.triggers }}" as="t" hint-placeholder-count="4">
+                <li>{{ t }}</li>
+              </sc-for>
+            </ul>
+          </div>
+          <div style="borderTop:1px solid var(--border-subtle); paddingTop:18px;">
+            <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:18px;">Outputs may include</div>
+            <ul style="listStyle:none; margin:0; padding:0; display:flex; flexDirection:column; gap:9px; fontSize:16px; lineHeight:1.5; color:var(--text-subtle);">
+              <sc-for list="{{ s.outputs }}" as="o" hint-placeholder-count="5">
+                <li>{{ o }}</li>
+              </sc-for>
+            </ul>
+            <a href="{{ s.exampleHref }}" style="display:inline-flex; alignItems:center; gap:8px; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-sm); color:var(--ink); fontSize:14px; lineHeight:21px; fontWeight:700; padding:var(--space-10) var(--space-20); marginTop:clamp(20px,2.6vw,30px);" style-hover="borderColor:var(--ink); background:var(--ink-strong); color:var(--surface);">{{ s.exampleLabel }} →</a>
+          </div>
+        </div>
+
+        <div style="marginTop:clamp(20px,2.6vw,32px);">
+          <img src="{{ s.image }}" alt="{{ s.imageAlt }}" loading="lazy" style="width:100%; height:auto; maxHeight:46vh; objectFit:contain; objectPosition:left center; display:block;">
+        </div>
+      </div>
+    </section>
+  </sc-for>
+  </div>
+
+  <section id="where-to-start" data-screen-label="What do you need" style="scrollMarginTop:16px; background:var(--band); color:var(--text-on-dark); padding:clamp(56px,7vw,112px) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-muted);">05 / Where to start</div>
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(34px,5vw,80px); lineHeight:1; letterSpacing:-0.02em; margin:clamp(16px,2vw,28px) 0 0; color:var(--text-on-dark);">Sound familiar?</h2>
+      <div style="marginTop:clamp(32px,4vw,64px);">
+        <sc-for list="{{ problems }}" as="p" hint-placeholder-count="7">
+          <div style="borderTop:1px solid var(--overlay-border-50); padding:clamp(10px,1.2vw,14px) 0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:10px clamp(24px,3vw,48px); alignItems:baseline;">
+            <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(16px,1.4vw,20px); lineHeight:1.3; letterSpacing:-0.02em; color:var(--text-on-dark);">{{ p.problem }}</span>
+          </div>
+        </sc-for>
+        <div style="borderTop:1px solid var(--overlay-border-50);"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" data-screen-label="Process" style="scrollMarginTop:16px; maxWidth:1440px; margin:0 auto; padding:clamp(56px,7vw,112px) clamp(20px,3vw,38px);">
+    <div style="display:flex; flexDirection:column; gap:clamp(24px,3vw,48px); alignItems:start;">
+      <div>
+        <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">06 / Process</div>
+        <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(28px,3.6vw,56px); lineHeight:1.05; letterSpacing:-0.02em; margin:0;">How a project<br>can move</h2>
+      </div>
+      <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:48ch;">Projects can begin at any point depending on the existing product, team and development stage. Not every project runs the full sequence.</p>
+    </div>
+    <div class="steps-row" style="display:grid; gridTemplateColumns:repeat(7,minmax(0,1fr)); gap:clamp(8px,1.2vw,20px); marginTop:clamp(28px,3.4vw,48px); overflowX:auto;">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="7">
+        <div style="borderTop:1px solid var(--border-subtle); paddingTop:14px; display:flex; alignItems:baseline; justifyContent:space-between; gap:8px; minWidth:104px;">
+          <span style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(16px,1.5vw,22px); lineHeight:1.2; letterSpacing:-0.01em;">{{ st.name }}</span>
+          <sc-if value="{{ st.arrow }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="fontSize:clamp(16px,1.5vw,22px); color:var(--text-subtle);">→</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="clients" data-screen-label="Engagement" style="scrollMarginTop:16px; background:var(--surface-muted); padding:clamp(56px,7vw,112px) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,4vw,64px); alignItems:start;">
+        <div>
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--text-subtle); marginBottom:clamp(14px,1.8vw,24px);">07 / Clients</div>
+          <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(30px,4vw,64px); lineHeight:1; letterSpacing:-0.02em; margin:0;">Who I<br>work with.</h2>
+        </div>
+      </div>
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,4vw,64px); marginTop:clamp(32px,4vw,56px);">
+        <div>
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:18px;">Client types</div>
+          <div style="display:flex; flexWrap:wrap; gap:8px 20px; fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(17px,1.7vw,22px); letterSpacing:-0.02em;">
+            <sc-for list="{{ clients }}" as="c" hint-placeholder-count="7">
+              <span>{{ c }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="fontSize:13px; fontWeight:600; lineHeight:1.3; letterSpacing:0.1em; textTransform:uppercase; color:var(--ink); marginBottom:18px;">India market experience</div>
+          <p style="fontSize:16px; lineHeight:1.5; color:var(--text-subtle); margin:0; maxWidth:46ch;">My experience includes footwear design and development for products intended for the Indian domestic market, which may be useful to brands entering or expanding there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="CTA" style="background:var(--surface); padding:clamp(64px,8vw,128px) 0 clamp(48px,6vw,88px);">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px); display:flex; flexDirection:column; alignItems:center; textAlign:center; gap:clamp(24px,3vw,40px);">
+      <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(40px,7vw,96px); lineHeight:1; letterSpacing:-0.02em; margin:0;">Have a project<br>in mind?</h2>
+      <p style="fontSize:clamp(17px,1.4vw,20px); lineHeight:1.5; color:var(--text-subtle); maxWidth:50ch; margin:0;">Share where the project currently stands and what support you need.</p>
+      <a href="Contact.dc.html" style="display:inline-flex; alignItems:center; justifyContent:center; background:var(--surface); border:1px solid var(--border-subtle); borderRadius:var(--radius-pill-lg); color:var(--text-subtle); fontSize:16px; lineHeight:24px; fontWeight:700; padding:clamp(24px,4vw,40px) clamp(48px,10vw,120px);" style-hover="borderColor:var(--ink); color:var(--ink);">Say hi</a>
+      <a href="Work.dc.html" style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); borderBottom:1px solid var(--border-subtle); paddingBottom:4px;">View work →</a>
+    </div>
+  </section>
+
+  <footer style="background:var(--band); color:var(--text-on-dark); padding:var(--space-40) 0;">
+    <div style="maxWidth:1440px; margin:0 auto; padding:0 clamp(20px,3vw,38px);">
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(24px,3vw,48px);">
+        <div>
+          <div style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(22px,2vw,28px); letterSpacing:-0.02em; color:var(--text-on-dark);">Vennie Ho</div>
+          <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted); marginTop:10px;">Footwear Designer &amp; Developer<br>From concept to production.</div>
+        </div>
+        <nav style="display:flex; flexDirection:column; gap:10px; fontSize:16px; lineHeight:24px;">
+          <a href="Work.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Work</a>
+          <a href="Services.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Services</a>
+          <a href="About.dc.html" style="color:var(--text-on-dark); padding:6px 0;">About</a>
+          <a href="Contact.dc.html" style="color:var(--text-on-dark); padding:6px 0;">Contact</a>
+        </nav>
+        <div style="fontSize:16px; lineHeight:24px; color:var(--text-muted);">
+          <a href="mailto:contact.vennie.ho@gmail.com" style="color:var(--text-on-dark);">contact.vennie.ho@gmail.com</a><br>Global
+        </div>
+      </div>
+      <div style="borderTop:1px solid var(--overlay-border-50); marginTop:clamp(28px,3.5vw,48px); paddingTop:20px; fontSize:16px; lineHeight:24px; color:var(--text-muted); display:flex; flexWrap:wrap; justifyContent:space-between; gap:10px 32px;">
+        <span>{{ copyright }}</span>
+        <span>Brand work shown for portfolio purposes. Trademarks belong to their owners. <a href="Work.dc.html#disclaimer" style="color:var(--text-on-dark); textDecoration:underline; textUnderlineOffset:3px;">Read the full disclaimer</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
+      serviceNames: [{ label: "Design", href: "#design" }, { label: "Technical", href: "#technical" }, { label: "Development", href: "#development" }, { label: "Production support", href: "#production-support" }, { label: "Where to start", href: "#where-to-start" }, { label: "Process", href: "#process" }, { label: "Clients", href: "#clients" }],
+      services: [
+        {
+          id: "design", label: "01", title: "Design", bg: "var(--surface)",
+          positioning: "Building the product direction from concept through footwear design, silhouette, upper construction and colour and material development.",
+          capabilities: ["Concept development", "Design direction", "Silhouette development", "Upper design", "Sole and outsole direction", "Colour & material", "2D design and rendering"],
+          triggers: ["You have a footwear idea but no developed design.", "You need a new silhouette or visual direction.", "You need a brief translated into a footwear concept.", "You need colour and material directions for an existing product."],
+          outputs: ["Concept direction", "Footwear design", "2D design views", "Colour and material direction", "Presentation visuals"],
+          image: "assets/services/01_DESIGN_BLUEPRINT_v3_pano.png",
+          imageAlt: "Design board in blueprint style: a concept sketch of a knit running shoe in side view, with an outsole drawing and a rear-view study",
+          exampleHref: "ProjectDetail.dc.html", exampleLabel: "Example — Performance Running"
+        },
+        {
+          id: "technical", label: "02", title: "Technical", bg: "var(--surface-muted)",
+          positioning: "Translating design intent into clear technical information for development and manufacturing communication.",
+          capabilities: ["Technical drawings", "Footwear tech packs", "BOM", "Material specifications", "Construction details", "Measurement specifications", "Pattern development support"],
+          triggers: ["You have a design but need clearer development documentation.", "Your factory needs technical clarification.", "You need a tech pack or construction information.", "You need design intent translated into production-ready information."],
+          outputs: ["Technical drawings", "Tech pack", "BOM support", "Material specification", "Construction details", "Development notes"],
+          image: "assets/services/02_TECHNICAL_BLUEPRINT_pano2.png",
+          imageAlt: "Technical board: a sneaker drawn in side, top, rear and outsole views with dimension guides, alongside exploded upper and midsole layers, material swatches and construction details",
+          exampleHref: "ProjectDetail.dc.html", exampleLabel: "Example — Performance Running"
+        },
+        {
+          id: "development", label: "03", title: "Development", bg: "var(--surface)",
+          positioning: "Supporting the product through samples, revision, material decisions, cost considerations and design optimization.",
+          capabilities: ["Cost-driven design", "Material optimization", "Construction optimization", "Sample development", "Prototype review", "Design revision", "Existing product optimization"],
+          triggers: ["Your sample does not match the original design intent.", "Your design is difficult or expensive to manufacture.", "You need help revising an existing product.", "You need alternative material or construction directions."],
+          outputs: ["Sample feedback", "Design revisions", "Material alternatives", "Construction refinement", "Cost-aware design adjustments"],
+          image: "assets/services/03_DEVELOPMENT_BLUEPRINT_pano2.png",
+          imageAlt: "Development board: an early sketch progressing through two refined product iterations, with heel construction studies, material swatches and top, sole and rear development views",
+          exampleHref: "SportswearLifestyle.dc.html", exampleLabel: "Example — Sportswear / Lifestyle"
+        },
+        {
+          id: "production-support", label: "04", title: "Production support", bg: "var(--surface-muted)",
+          positioning: "Helping maintain design intent and technical clarity during communication with factories, suppliers and development teams.",
+          capabilities: ["Technical consulting", "Manufacturing feasibility", "Factory communication", "Sample feedback", "Technical clarification", "Production issue support", "Material and construction discussion"],
+          triggers: ["Your factory has questions about the design.", "Development information is being read differently across teams.", "A sample needs technical or design clarification.", "You need someone who can talk to both design and manufacturing."],
+          outputs: ["Factory clarification", "Development feedback", "Technical communication", "Sample review notes", "Design adjustments"],
+          image: "assets/services/04_PRODUCTION_SUPPORT_BLUEPRINT_pano2.png",
+          imageAlt: "Production board: a finished sneaker beside its exploded upper, midsole and outsole components, an outsole tread drawing, a two-part metal mould block and a stitched material detail",
+          exampleHref: "SportswearLifestyle.dc.html", exampleLabel: "Example — Sportswear / Lifestyle"
+        }
+      ],
+      problems: [
+        { problem: "I have an idea but no design.", answer: "Design" },
+        { problem: "I have a design but need development documentation.", answer: "Technical" },
+        { problem: "My sample doesn't match the design.", answer: "Development" },
+        { problem: "The product is too expensive to make.", answer: "Development — cost-driven design" },
+        { problem: "My factory needs clarification.", answer: "Production support" },
+        { problem: "I already have a product but want to improve it.", answer: "Development" },
+        { problem: "I need support from design through sample development.", answer: "Design + Technical + Development" }
+      ],
+      steps: [
+        { num: "01", name: "Brief" },
+        { num: "02", name: "Design" },
+        { num: "03", name: "Technical" },
+        { num: "04", name: "Sample" },
+        { num: "05", name: "Review" },
+        { num: "06", name: "Refinement" },
+        { num: "07", name: "Production support" }
+      ].map((st, i, a) => ({ ...st, arrow: i < a.length - 1 })),
+      engagementExamples: ["Concept only", "Technical only", "Sample revision", "Full design-to-development support"],
+      clients: ["Footwear brands", "Sports and performance brands", "Independent brands", "Startups", "Manufacturers", "Product development companies", "Design teams"]
+    };
+  }
+}
+</script>
+</body>
+</html>
