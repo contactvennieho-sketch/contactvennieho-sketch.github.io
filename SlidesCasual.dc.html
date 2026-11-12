@@ -19,13 +19,14 @@
 <link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
 <link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
 <script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
-<link rel="stylesheet" href="mm-ds/tokens.css">
+<link rel="stylesheet" href="mm-ds/tokens.css?v=4">
 <meta name="robots" content="noindex, nofollow">
 <style>
 html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
 a{color:var(--ink);text-decoration:none;}
 a:hover{color:var(--accent-magenta);}
 </style>
+<style>img,[style*="aspect-ratio"]{max-width:100%;box-sizing:border-box;}</style>
 </helmet>
 
 <div style="background:var(--surface); fontFamily:var(--font-sans); color:var(--ink); overflowX:hidden;">
@@ -113,7 +114,8 @@ a:hover{color:var(--accent-magenta);}
           <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.4vw,52px); lineHeight:1.05; letterSpacing:-0.02em; margin:0;">Colour changes<br>the product</h2>
         </div>
       </div>
-      <div style="display:flex; flexDirection:column; gap:clamp(24px,3vw,44px); marginTop:clamp(32px,4vw,56px);">
+      <div style="marginTop:clamp(32px,4vw,56px);"><div class="rail-hint" aria-hidden="true">→</div>
+<div class="h-rail" style="display:flex; flexDirection:column; gap:clamp(24px,3vw,44px);">
         <sc-for list="{{ cmfAssets }}" as="a" hint-placeholder-count="3">
           <figure style="margin:0;">
             <div style="aspectRatio:{{ a.ratio }}; minHeight:{{ a.minH }}; display:flex; alignItems:center; justifyContent:center; padding:{{ a.pad }};">
@@ -122,8 +124,8 @@ a:hover{color:var(--accent-magenta);}
             <figcaption style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:12px;">{{ a.caption }}</figcaption>
           </figure>
         </sc-for>
+        </div>
       </div>
-      <p style="fontSize:12px; lineHeight:1.6; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); margin:clamp(20px,2.5vw,32px) 0 0;">Colour names and material codes appear on these boards — remove before public launch.</p>
     </div>
   </section>
 
@@ -134,7 +136,8 @@ a:hover{color:var(--accent-magenta);}
         <h2 style="fontFamily:var(--font-display); fontWeight:600; fontSize:clamp(26px,3.2vw,48px); lineHeight:1.05; letterSpacing:-0.02em; margin:0;">Exploring different<br>visual languages</h2>
       </div>
     </div>
-    <div style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(18px,2.4vw,32px); marginTop:clamp(28px,3.5vw,48px);">
+    <div style="marginTop:clamp(28px,3.5vw,48px);"><div class="rail-hint" aria-hidden="true">→</div>
+    <div class="h-rail" style="display:grid; gridTemplateColumns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(18px,2.4vw,32px);">
       <sc-for list="{{ acteveAssets }}" as="a" hint-placeholder-count="3">
         <figure style="margin:0;">
           <div style="aspectRatio:3 / 2; minHeight:160px; display:flex; alignItems:center; justifyContent:center; padding:clamp(14px,4%,32px);">
@@ -143,6 +146,7 @@ a:hover{color:var(--accent-magenta);}
           <figcaption style="fontSize:12px; lineHeight:1.2; letterSpacing:0.12em; textTransform:uppercase; color:var(--text-subtle); marginTop:10px;">{{ a.caption }}</figcaption>
         </figure>
       </sc-for>
+    </div>
     </div>
   </section>
 

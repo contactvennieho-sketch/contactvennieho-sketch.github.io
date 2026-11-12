@@ -19,13 +19,14 @@
 <link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/tokens/motion.css">
 <link rel="stylesheet" href="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/styles.css">
 <script src="ds/max-martinez-design-system-7200aafc-a645-42f4-8bd8-c96eeb77dc72/_ds_bundle.js"></script>
-<link rel="stylesheet" href="mm-ds/tokens.css">
+<link rel="stylesheet" href="mm-ds/tokens.css?v=4">
 <meta name="robots" content="noindex, nofollow">
 <style>
 html,body{margin:0;padding:0;background:var(--surface);color:var(--ink);-webkit-font-smoothing:antialiased;}
 a{color:var(--ink);text-decoration:none;}
 a:hover{color:var(--accent-magenta);}
 </style>
+<style>img,[style*="aspect-ratio"]{max-width:100%;box-sizing:border-box;}</style>
 </helmet>
 
 <div style="background:var(--surface); font-family:var(--font-sans); color:var(--ink); overflow-x:hidden;">
@@ -181,12 +182,15 @@ a:hover{color:var(--accent-magenta);}
         <p style="fontSize:var(--size-body-sm); lineHeight:1.6; color:var(--text-subtle); maxWidth:48ch; margin:clamp(20px,3vw,32px) 0 0;">Silhouette, proportion, material and colour are adjusted to suit each product direction rather than carried across from one model to the next.</p>
       </div>
       <div>
+        <div class="rail-hint" aria-hidden="true">→</div>
+        <div class="h-rail h-rail--small h-rail--rows">
         <sc-for list="{{ variation }}" as="v" hint-placeholder-count="4">
           <div style="borderBottom:1px solid var(--border-subtle); padding:clamp(16px,2vw,22px) 0; display:grid; gridTemplateColumns:repeat(auto-fit,minmax(150px,1fr)); gap:8px 24px; alignItems:baseline;">
             <span style="fontWeight:600; fontSize:clamp(15px,1.2vw,19px); letterSpacing:0.03em; textTransform:uppercase;">{{ v.model }}</span>
             <span style="fontSize:13px; fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; color:var(--text-subtle);">{{ v.note }}</span>
           </div>
         </sc-for>
+        </div>
       </div>
     </div>
   </section>

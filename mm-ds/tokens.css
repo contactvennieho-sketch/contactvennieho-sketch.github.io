@@ -64,3 +64,16 @@
 
 /* Never let an image frame grow wider than its column (fixes cropped photos on phones) */
 img, [style*="aspect-ratio"] { max-width: 100%; box-sizing: border-box; }
+
+/* Phones: long stacks become one row you swipe sideways */
+.rail-hint { display: none; }
+@media (max-width: 760px) {
+  .h-rail { display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: stretch !important; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 16px !important; margin-left: -20px !important; margin-right: -20px !important; padding: 0 20px 4px !important; scroll-padding-left: 20px; }
+  .h-rail::-webkit-scrollbar { display: none; }
+  .h-rail > * { flex: 0 0 84%; min-width: 0; scroll-snap-align: start; box-sizing: border-box; }
+  .h-rail--small > * { flex-basis: 72%; }
+  .h-rail--rows > * { border: 1px solid var(--border-subtle) !important; padding: 20px !important; }
+  .h-rail--table > * { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .rail-hide { display: none !important; }
+  .rail-hint { display: flex; justify-content: flex-end; color: var(--text-subtle); font-size: 20px; line-height: 1; padding-bottom: 12px; }
+}
