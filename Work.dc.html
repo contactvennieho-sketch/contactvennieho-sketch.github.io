@@ -120,7 +120,7 @@ a:hover{color:var(--accent-magenta);}
       <sc-for list="{{ additional }}" as="a" hint-placeholder-count="3">
         <div>
           <div style="position:relative; aspectRatio:1 / 1; display:flex; alignItems:center; justifyContent:center; padding:clamp(16px,7%,32px); overflow:hidden;">
-            <img src="{{ a.image }}" alt="{{ a.alt }}" loading="lazy" style="width:100%; height:100%; objectFit:contain; display:block;">
+            <img src="{{ a.image }}" alt="{{ a.alt }}" style="width:100%; height:100%; objectFit:contain; display:block;">
             <sc-if value="{{ a.flagged }}" hint-placeholder-val="{{ false }}">
               <span style="position:absolute; top:12px; left:12px; background:var(--chip); color:var(--text-on-dark); fontSize:var(--size-micro); fontWeight:500; letterSpacing:var(--tracking-caps); textTransform:uppercase; padding:5px 9px;">Private</span>
             </sc-if>
