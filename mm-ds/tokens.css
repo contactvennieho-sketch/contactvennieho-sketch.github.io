@@ -72,6 +72,8 @@ img, [style*="aspect-ratio"] { max-width: 100%; box-sizing: border-box; }
   .h-rail::-webkit-scrollbar { display: none; }
   .h-rail > * { flex: 0 0 84%; min-width: 0; scroll-snap-align: start; box-sizing: border-box; }
   .h-rail--small > * { flex-basis: 72%; }
+  .h-rail--wide > * { flex-basis: 92%; }
+  .h-rail [style*="aspect-ratio"] { min-height: 0 !important; }
   .h-rail--rows > * { border: 1px solid var(--border-subtle) !important; padding: 20px !important; }
   .h-rail--table > * { grid-template-columns: 1fr !important; gap: 10px !important; }
   .rail-hide { display: none !important; }
