@@ -67,7 +67,7 @@ a:hover{color:var(--accent-magenta);}
     </div>
     <div class="about-portrait" style="maxWidth:360px; width:100%; justifySelf:end;">
       <sc-if value="{{ hasPortrait }}" hint-placeholder-val="{{ false }}">
-        <img src="{{ portrait }}" alt="Vennie at her desk with footwear sketches" style="width:100%; aspectRatio:4 / 5; objectFit:cover; display:block;">
+        <img src="{{ portrait }}" alt="Portrait of Vennie Ho" style="width:100%; aspectRatio:4 / 5; objectFit:cover; display:block;">
       </sc-if>
       <sc-if value="{{ noPortrait }}" hint-placeholder-val="{{ true }}">
         <div style="border:1px solid var(--border-subtle); aspectRatio:4 / 5; display:flex; flexDirection:column; justifyContent:flex-end; gap:8px; padding:clamp(20px,3vw,32px);">
@@ -266,7 +266,7 @@ a:hover{color:var(--accent-magenta);}
 class Component extends DCLogic {
   renderVals() {
     // Set portrait to a real image path once a professional portrait is supplied.
-    const portrait = this.props.portrait || "assets/about/portrait_about.png";
+    const portrait = this.props.portrait || "assets/about/portrait_2026.jpg";
     return {
       copyright: "© " + new Date().getFullYear() + " Vennie Ho. Site design and original content.",
       portrait: portrait,
